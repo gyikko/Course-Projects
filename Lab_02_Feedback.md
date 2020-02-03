@@ -1,6 +1,6 @@
 ### Feedback for Lab 02
 
-Run on February 02, 23:35:19 PM.
+Run on February 02, 23:39:04 PM.
 
 
 #### Necessary Files and Structure
@@ -21,22 +21,16 @@ Run on February 02, 23:35:19 PM.
 
 ### .gitignore set up properly
 
-+ Fail: Check that no files with extension ".o" exist in directory "."
++ Pass: Check that no files with extension ".o" exist in directory "."
 
- "quack_quack.o" found
-
-+ Skip: Check that no files with extension ".out" exist in directory "."
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that no files with extension ".out" exist in directory "."
 
 
 ### Test that code compiles and creates executable
 
-+ Skip: Check that make compiles.
++ Pass: Check that make compiles.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Check that file "ducks" exists.
 
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "ducks" exists.
 
