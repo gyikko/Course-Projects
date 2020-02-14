@@ -1,80 +1,52 @@
 ### Style Feedback for Lab 07
 
-Run on February 14, 10:21:49 AM.
+Run on February 14, 11:17:00 AM.
 
 
 #### Necessary Files and Structure
 
-+ Fail: Check that directory "cpplint" exists.
++ Pass: Check that directory "cpplint" exists.
 
-     "cpplint" not found.
++ Pass: Check that directory "labs" exists.
 
-+ Skip: Check that directory "labs" exists.
++ Pass: Check that directory "labs/lab07_style_doxy" exists.
 
-  This test was not run because of an earlier failing test.
++ Pass: Change into directory "labs/lab07_style_doxy".
 
-+ Skip: Check that directory "labs/lab07_style_doxy" exists.
++ Pass: Check that directory "docs" exists.
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Change into directory "labs/lab07_style_doxy".
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that directory "docs" exists.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file "docs/Doxyfile" exists.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "docs/Doxyfile" exists.
 
 
 #### .gitignore configured properly
 
-+ Skip: Check that file/directory "html" does not exist.
++ Pass: Check that file/directory "html" does not exist.
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file/directory "latex" does not exist.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file/directory "latex" does not exist.
 
 
 #### Google Style Compliance
 
-+ Fail: Check that file "src/mainpage.h" exists.
++ Pass: Check that file "src/mainpage.h" exists.
 
-     "src/mainpage.h" not found.
++ Pass: Ignoring mainpage.h
 
-+ Skip: Ignoring mainpage.h
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Cpplint checking for for Google C++ compliance
++ Pass: Cpplint checking for for Google C++ compliance
 
-  This test was not run because of an earlier failing test.
++ Pass: Getting mainpage.h back
 
-+ Skip: Getting mainpage.h back
 
-  This test was not run because of an earlier failing test.
 
 
 #### Doxygen
 
-+ Fail: Change into directory "docs".
++ Pass: Change into directory "docs".
 
-     Directory "docs" not found.
++ Pass: Generating documentation by running doxygen
 
-+ Skip: Generating documentation by running doxygen
++ Pass: Check that file "html/classPassenger.html" exists.
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file "html/classPassenger.html" exists.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file "html/classPassengerFactory.html" exists.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "html/classPassengerFactory.html" exists.
 
