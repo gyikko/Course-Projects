@@ -36,23 +36,29 @@ void doInterestingThing(int yr) {
 
   cout << " ... Now print out 4 dates in reverse time order ... " << endl;
 
-  birthday_list = new Date*[*array_len];
+  birthday_list = new Date*[*array_len]; 
   // accumulate the all dates January 1, from 1990 to 1990+array_len
   for (int i = 0; i < *array_len; i++) {
     birthday_list[i] = new Date(1990+i, 1, 1);
   }
-
+  
   // now show the dates accumulated in reverse order
   for (int i = *array_len-1; i >= 0;  i--) {
     cout << "date is: " << birthday_list[i]->show() << endl;
   }
+  for (int i = *array_len-1; i >= 0; i--) {
+    delete birthday_list[i];
+  }
 
   // now set the dates to January 2
-  for (int i = 0; i <= *array_len; i++) {
+  for (int i = 0; i < *array_len; i++) {
     birthday_list[i] = new Date(1990+i, 1, 2);
-  }
-  
+  }  
   cout << "the first date is: " << birthday_list[0]->show() << endl;
+  for (int i = 0; i < *array_len; i++) {
+    delete birthday_list[i]; 
+  }
+  delete[] birthday_list;
 }
 
 int main() {

@@ -169,7 +169,6 @@ Date * mkDate_ptr(int y, int m, int d) {
         throw InvalidData("Invalid Date passed to Date::before.");
 
     Date *date = new Date(y, m, d);
-
     return  date;
 }
 
