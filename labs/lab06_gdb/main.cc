@@ -21,9 +21,11 @@ void doInterestingThing(int yr) {
 
   cout << " ... A set of Dates ... " << endl;
 
-  array_len = NULL;
+  //array_len = NULL;
   d2 = Date(yr, 4, 19);
   d3 = d2.copy();
+  int k;
+  array_len = &k;
   *array_len = 4;
 
   cout << "default date is: " << d1.show() << endl;
@@ -41,13 +43,13 @@ void doInterestingThing(int yr) {
   }
 
   // now show the dates accumulated in reverse order
-  for (int i = 0; i < *array_len; --i) {
+  for (int i = *array_len-1; i >= 0;  i--) {
     cout << "date is: " << birthday_list[i]->show() << endl;
   }
 
   // now set the dates to January 2
   for (int i = 0; i <= *array_len; i++) {
-    *birthday_list[i] = Date(1990+i, 1, 2);
+    birthday_list[i] = new Date(1990+i, 1, 2);
   }
   
   cout << "the first date is: " << birthday_list[0]->show() << endl;
