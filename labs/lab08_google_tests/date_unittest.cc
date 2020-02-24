@@ -78,7 +78,6 @@ TEST_F(DateTest, GetUsDateTest) {
   EXPECT_EQ(last_day.GetUsDate(), "12-11-2018") << "Last day of class not setup properly";
 }
 
-
 TEST_F(DateTest, PrintDateTests) {
   Date y2k(1999, 12, 31);              // y2k
   Date ind_day(1776, 7, 4);            // US Independence
@@ -143,6 +142,11 @@ TEST_F(DateTest, DaysBetweenTests) {
   EXPECT_EQ(first_day.GetUsDate(), "09-04-2018") << "First day of class not setup properly";
   EXPECT_EQ(last_day.GetUsDate(), "12-11-2018") << "Last day of class not setup properly";
   EXPECT_EQ(first_day.DaysBetween(last_day), 98) << "Days between is not calculated properly";
+
+  //test between date
+  Date between_rhs(2016, 1, 1);
+  Date between_lhs(2016, 3, 1);
+  EXPECT_EQ(between_rhs.DaysBetween(between_lhs), 60) << "Days between is not calculated properly";
 }
 
 /**
