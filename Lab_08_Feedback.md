@@ -1,6 +1,6 @@
 ### Fuller Feedback for Lab 08
 
-Run on February 24, 13:22:21 PM.
+Run on February 24, 16:11:27 PM.
 
 
 #### System Files and Lab Directory Structure
@@ -40,12 +40,17 @@ Run on February 24, 13:22:21 PM.
 + Pass: Check that file "date_unittest" exists.
 
 + Pass: Get all google tests.
-    8 tests found.
+    9 tests found.
 
 
 
 
 #### Results
+
++ Pass: Check that a GoogleTest test passes.
+    passes the test: DateTest.dateVoidTest.
+
+
 
 + Pass: Check that a GoogleTest test passes.
     passes the test: DateTest.dateConstructorTest.
@@ -110,14 +115,12 @@ Run on February 24, 13:22:21 PM.
 
 #### Testing Mutant 4 for failure
 
-+ Fail: There is no test case for this mutant (since all tests pass).
-   - Reason - Today's date month off by one
++ Pass: At least one test failed for Mutant 4
 
 
 #### Testing Mutant 5 for failure
 
-+ Fail: There is no test case for this mutant (since all tests pass).
-   - Reason - 1/1/2016 to 3/1/2016 is 60 days, but this version returns 59
++ Pass: At least one test failed for Mutant 5
 
 
 #### Testing Mutant 6 for failure
