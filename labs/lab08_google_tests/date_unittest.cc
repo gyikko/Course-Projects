@@ -19,6 +19,22 @@ class DateTest : public ::testing::Test {
   Date last_day;           // last day of classes
 };
 
+TEST_F(DateTest, dateVoidTest) {
+  Date void_test;
+  std::time_t t = std::time(0);
+  std::tm* now = std::localtime(&t);
+  
+  //tm year's value is years since 1900
+  int yyyy_ = now->tm_year + 1900;
+  //tm month's value is zero-indexed
+  int mm_ = now->tm_mon + 1;
+  //tm day's value is one-indexed
+  int dd_ = now->tm_mday;
+ 
+  Date output = Date(yyyy_, mm_, dd_);
+  EXPECT_EQ(void_test.GetDate(), output.GetDate()) << "Date Void of class not setup properly";
+}
+
 TEST_F(DateTest, dateConstructorTest) {
   Date testEpoch(0); /*
   std::time_t epoch_t = 0;
@@ -49,8 +65,12 @@ TEST_F(DateTest, operateMinusTest) {
 }
 
 TEST_F(DateTest,GetDateTest) {
+  Date zero_test = Date(2000,1,1);
+  Date miss_test = Date(2018,10,8);
   EXPECT_EQ(first_day.GetDate(), "2018-09-04") << "First day of class not setup properly";
   EXPECT_EQ(last_day.GetDate(), "2018-12-11") << "Last day of class not setup properly";
+  EXPECT_EQ(zero_test.GetDate(), "2000-01-01") << "Miss a leading zero";
+  EXPECT_EQ(miss_test.GetDate(), "2018-10-08") << "Miss a characte";
 }
 
 TEST_F(DateTest, GetUsDateTest) {
