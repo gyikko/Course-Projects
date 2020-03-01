@@ -91,7 +91,8 @@ void Route::NextStop() {
   destination_stop_index_++;
 
   if (destination_stop_index_ < num_stops_) {
-    // operator[] promises efficient access to elements
+    // operator[] promises efficient
+    // access to elements
     // Lists don't provide that (efficiently)
     // Can't use [] on lists
     std::list<Stop *>::const_iterator iter = stops_.begin();
@@ -111,7 +112,7 @@ Stop * Route::GetDestinationStop() const {
   // std::advance is O(n)
   std::list<Stop *>::const_iterator iter = stops_.begin();
   std::advance(iter, destination_stop_index_);
-  return *iter; //resolving the iterator gets you the Stop * from the list
+  return *iter;  // resolving the iterator gets you the Stop * from the list
   return destination_stop_;
 }
 
