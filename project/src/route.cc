@@ -99,9 +99,9 @@ void Route::NextStop() {
     destination_stop_ = *iter;
   } else {
       destination_stop_ = (*stops_.end());
-      //std::list<Stop *>::const_iterator iter = stops_.begin();
-      //std::advance(iter, num_stops_ - 1);
-      //destination_stop_ = *iter;
+      // std::list<Stop *>::const_iterator iter = stops_.begin();
+      // std::advance(iter, num_stops_ - 1);
+      // destination_stop_ = *iter;
   }
 }
 
@@ -109,9 +109,9 @@ Stop * Route::GetDestinationStop() const {
   // Despite this being derived data (from destination_stop_index_ and stops_)
   // we store this, because [] does not exist for lists, and
   // std::advance is O(n)
-  /* std::list<Stop *>::const_iterator iter = stops_.begin();
-     std::advance(iter, destination_stop_index_);
-     return *iter; //resolving the iterator gets you the Stop * from the list */
+  std::list<Stop *>::const_iterator iter = stops_.begin();
+  std::advance(iter, destination_stop_index_);
+  return *iter; //resolving the iterator gets you the Stop * from the list
   return destination_stop_;
 }
 
@@ -143,7 +143,6 @@ int Route::GenerateNewPassengers() {
 }
 
 void Route::UpdateRouteData() {
-
     route_data_.id = name_;
 
     std::vector<StopData> stopDataVec = std::vector<StopData>();
