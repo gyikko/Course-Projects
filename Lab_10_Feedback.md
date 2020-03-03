@@ -1,6 +1,6 @@
 ### Feedback for Lab 10
 
-Run on March 02, 09:43:37 AM.
+Run on March 02, 19:20:02 PM.
 
 
 ### Necessary Files and Structure
@@ -26,7 +26,7 @@ Run on March 02, 09:43:37 AM.
 
 		31f65a28935eabf331a4994f5f1f089d3290c0b1	refs/heads/fix/02-google-style
 
-		3ca1be31bd550fdd39d3689d49972d4a6e2d536e	refs/heads/master
+		aa670725a37055add26b17504239c3a6bc9338e3	refs/heads/master
 
 
 
@@ -118,11 +118,9 @@ Sufficient commits (found=18,required=4)
 
 + Pass: Configuring GHI
 
-+ Pass: Run ghi for total number of open issues in Github repo (Found: 2)
++ Pass: Run ghi for total number of open issues in Github repo (Found: 1)
 
 [OPEN issue #2] :  cpplint Errors [enhancement] 1
-
-[OPEN issue #1] :  Prevent Compilation [bug] 1
 
 
 
@@ -130,11 +128,9 @@ Sufficient commits (found=18,required=4)
 
 + Pass: Run ghi for total number of closed issues in Github repo (Found: 0)
 
-+ Pass: Run ghi for total number of issues in Github repo (Found: 2, Expected: 2) 
++ Pass: Run ghi for total number of issues in Github repo (Found: 1, Expected: 2) 
 
  [OPEN issue #2] :  cpplint Errors [enhancement] 1
-
-[OPEN issue #1] :  Prevent Compilation [bug] 1
 
 [CLOSED issue #] : 
 
