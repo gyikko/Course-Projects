@@ -21,11 +21,6 @@ RandomPassengerGenerator::RandomPassengerGenerator(std::list<double> probs,
  *  Once the probability drops below .0001, we end our generation cycle for the stop.
  */
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> devel
 int RandomPassengerGenerator::GeneratePassengers() {
   int passengers_added = 0;
   std::list<double>::iterator prob_iter;
@@ -71,7 +66,4 @@ int RandomPassengerGenerator::GeneratePassengers() {
 
   return passengers_added;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> devel
