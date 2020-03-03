@@ -1,5 +1,5 @@
 ## Lab 10 : The Process of using Git for Developing the Project: Merging, Branching, and GitHub Issues
-
+## !!!!!
 In this lab, you will prepare the iteration1 code (in the _project_ folder) and learn about how to develop code using best practices. The project base code will be added to your repo and you will establish a system for using Github _issues_ and creating branches to track and address those issues.
 
 There is an informative guide on the use of git and branching that was developed by John Harwell, a former teaching assistant for this course. Please review this because, as part of project assessment, we will be looking at your use of _issues_, branching, and commit messages. This guide can be found in **_git-usage.pdf_** in the lab10_advanced_git folder.

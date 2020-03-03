@@ -6,6 +6,7 @@
 #include <iostream>
 #include <vector>
 #include "src/stop.h"
+#include "src/passenger.h"
 
 // Defaults to Westbound Coffman Union stop
 Stop::Stop(int id, double longitude,
