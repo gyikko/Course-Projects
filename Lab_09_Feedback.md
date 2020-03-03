@@ -1,6 +1,6 @@
 ### Feedback for Lab 09
 
-Run on March 02, 19:22:21 PM.
+Run on March 02, 19:31:41 PM.
 
 
 #### Necessary Files and Structure
@@ -35,32 +35,11 @@ Run on March 02, 19:22:21 PM.
 
 + Pass: Change into directory "src".
 
-+ Fail: Check that make compiles.
-
-    Make compile fails with errors:.
-<pre>==== Auto-Generating Dependencies for passenger_factory.cc. ====
-==== Compiling passenger_factory.cc into /project/grades/Spring-2020/csci3081/student-repos/Lab_09_Feedback/repo-jinxx679/project/build/obj/transit_sim/passenger_factory.o. ====
-==== Auto-Generating Dependencies for bus.cc. ====
-==== Compiling bus.cc into /project/grades/Spring-2020/csci3081/student-repos/Lab_09_Feedback/repo-jinxx679/project/build/obj/transit_sim/bus.o. ====
-==== Auto-Generating Dependencies for random_passenger_generator.cc. ====
-==== Compiling random_passenger_generator.cc into /project/grades/Spring-2020/csci3081/student-repos/Lab_09_Feedback/repo-jinxx679/project/build/obj/transit_sim/random_passenger_generator.o. ====
-random_passenger_generator.cc:24:1: error: version control conflict marker in file
- <<<<<<< HEAD
- ^~~~~~~
-random_passenger_generator.cc:74:1: error: version control conflict marker in file
- <<<<<<< HEAD
- ^~~~~~~
-makefile:102: recipe for target '/project/grades/Spring-2020/csci3081/student-repos/Lab_09_Feedback/repo-jinxx679/project/build/obj/transit_sim/random_passenger_generator.o' failed
-make: *** [/project/grades/Spring-2020/csci3081/student-repos/Lab_09_Feedback/repo-jinxx679/project/build/obj/transit_sim/random_passenger_generator.o] Error 1
-</pre>
++ Pass: Check that make compiles.
 
 
 
-+ Skip: Change into directory "..".
++ Pass: Change into directory "..".
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file "build/bin/vis_sim" exists.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "build/bin/vis_sim" exists.
 
