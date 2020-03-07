@@ -128,7 +128,6 @@ bool Bus::Move() {
             distance_remaining_ += incoming_route_->GetNextStopDistance();
         } else {
             next_stop_ = current_route->GetDestinationStop();
-
             // adding here in case negative time still remains
             // // (see passengers_handled above)
             distance_remaining_ += current_route->GetNextStopDistance();
