@@ -126,7 +126,14 @@ void UpdateCommand::execute(MyWebServerSession* session, picojson::value& comman
     mySim->Update();
 }
 
+PauseCommand::PauseCommand(VisualizationSimulator* sim): mySim(sim){}
+void PauseCommand::execute(MyWebServerSession* session, picojson::value& command, MyWebServerSessionState* state) {
+    (void)session;
+    (void)state;
+    (void)command;
 
+    mySim->Pause();
+}
 
 InitRoutesCommand::InitRoutesCommand(ConfigManager* configManager) : cm(configManager) {}
 

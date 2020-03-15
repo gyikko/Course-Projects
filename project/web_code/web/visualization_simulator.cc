@@ -31,7 +31,6 @@ void VisualizationSimulator::Start(const std::vector<int>& busStartTimings, cons
         prototypeRoutes_[i]->UpdateRouteData();
         webInterface_->UpdateRoute(prototypeRoutes_[i]->GetRouteData());
     }
-
 }
 
 void VisualizationSimulator::Update() {
@@ -58,26 +57,26 @@ void VisualizationSimulator::Update() {
         } else {
             timeSinceLastBus_[i]--;
         }
-    }   
-    
-    std::cout << "~~~~~~~~~ Updating busses ";
-    std::cout << "~~~~~~~~~" << std::endl;
-
-    // Update busses
-    for (int i = static_cast<int>(busses_.size()) - 1; i >= 0; i--) {
-        busses_[i]->Update();
-
-        if (busses_[i]->IsTripComplete()) { 
-            webInterface_->UpdateBus(busses_[i]->GetBusData(), true);
-            busses_.erase(busses_.begin() + i);
-            continue;
-        }
-        
-        webInterface_->UpdateBus(busses_[i]->GetBusData());
-
-        busses_[i]->Report(std::cout);
     }
-    
+    if (pause == false) {   
+        std::cout << "~~~~~~~~~ Updating busses ";
+        std::cout << "~~~~~~~~~" << std::endl;
+
+        // Update busses
+        for (int i = static_cast<int>(busses_.size()) - 1; i >= 0; i--) {
+            busses_[i]->Update();
+
+            if (busses_[i]->IsTripComplete()) { 
+                webInterface_->UpdateBus(busses_[i]->GetBusData(), true);
+                busses_.erase(busses_.begin() + i);
+                continue;
+            }
+            
+            webInterface_->UpdateBus(busses_[i]->GetBusData());
+
+            busses_[i]->Report(std::cout);
+        }
+    }
     std::cout << "~~~~~~~~~ Updating routes ";
     std::cout << "~~~~~~~~~" << std::endl;
     // Update routes
@@ -88,5 +87,8 @@ void VisualizationSimulator::Update() {
 
         prototypeRoutes_[i]->Report(std::cout);
     }
- 
+}
+
+void VisualizationSimulator::Pause() {
+    pause = !pause;
 }
