@@ -7,10 +7,10 @@
  ../src/bus.h ../src/route.h ../src/./data_structs.h \
  ../src/./passenger_generator.h ../src/passenger_factory.h \
  ../src/./stop.h route.h config_manager.h \
- /home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/my_web_server_session_state.h \
- /home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/my_web_server_command.h \
- /home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/visualization_simulator.h \
- /home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/my_web_server_session.h \
+ ../web_code/web/my_web_server_session_state.h \
+ ../web_code/web/my_web_server_command.h \
+ ../web_code/web/visualization_simulator.h \
+ ../web_code/web/my_web_server_session.h \
  /classes/grades/Fall-2019/csci3081/project/external/include/cppwebserver/WebServer.h \
  /classes/grades/Fall-2019/csci3081/project/external/include/websockets/libwebsockets.h \
  /classes/grades/Fall-2019/csci3081/project/external/include/websockets/lws_config.h \
@@ -68,8 +68,9 @@
  /classes/grades/Fall-2019/csci3081/project/external/include/websockets/libwebsockets/lws-jws.h \
  /classes/grades/Fall-2019/csci3081/project/external/include/websockets/libwebsockets/lws-jwe.h \
  /classes/grades/Fall-2019/csci3081/project/external/include/cppwebserver/picojson.h \
- /home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/my_web_server.h \
- /home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/web_interface.h
+ ../web_code/web/my_web_server_session_state.h \
+ ../web_code/web/my_web_server.h ../web_code/web/my_web_server_session.h \
+ ../web_code/web/my_web_server.h
 
 ../src/config_manager.h:
 
@@ -109,13 +110,13 @@ route.h:
 
 config_manager.h:
 
-/home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/my_web_server_session_state.h:
+../web_code/web/my_web_server_session_state.h:
 
-/home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/my_web_server_command.h:
+../web_code/web/my_web_server_command.h:
 
-/home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/visualization_simulator.h:
+../web_code/web/visualization_simulator.h:
 
-/home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/my_web_server_session.h:
+../web_code/web/my_web_server_session.h:
 
 /classes/grades/Fall-2019/csci3081/project/external/include/cppwebserver/WebServer.h:
 
@@ -231,6 +232,10 @@ config_manager.h:
 
 /classes/grades/Fall-2019/csci3081/project/external/include/cppwebserver/picojson.h:
 
-/home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/my_web_server.h:
+../web_code/web/my_web_server_session_state.h:
 
-/home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/web_interface.h:
+../web_code/web/my_web_server.h:
+
+../web_code/web/my_web_server_session.h:
+
+../web_code/web/my_web_server.h:

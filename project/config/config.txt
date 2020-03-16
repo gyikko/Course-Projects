@@ -24,3 +24,17 @@ STOP, Ridder Arena, 44.978058, -93.229176, .05
 STOP, Pleasant Street at Jones-Eddy Circle, 44.978366, -93.236038, .1
 STOP, Bruininks Hall, 44.974549, -93.236927, .3
 STOP, Blegen Hall, 44.972638, -93.243591, 0
+
+ROUTE, East Jin
+
+STOP, Blegen Hall, 44.972392, -93.243774, .15
+STOP, Coffman, 44.973580, -93.235071, .3
+STOP, Oak Street at University Avenue, 44.975392, -93.226632, .025
+STOP, St. Paul Student Center, 44.984630, -93.186352, 0
+
+ROUTE, West Jin
+
+STOP, St. Paul Student Center, 44.984630, -93.186352, .35
+STOP, Ridder Arena, 44.978058, -93.229176, .05
+STOP, Bruininks Hall, 44.974549, -93.236927, .3
+STOP, Blegen Hall, 44.972638, -93.243591, 0
