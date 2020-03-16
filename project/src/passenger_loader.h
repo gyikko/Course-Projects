@@ -12,8 +12,8 @@
 class PassengerLoader {
  public:
   // LoadPassenger returns the number of passengers added to the bus.
-  // Currently this is either one or zero: either passenger was added or they
-  // weren't.
+  // Currently this is either one or zero:
+  // either passenger was added or they weren't.
   // This was a design decision. We don't know if we should allow the adding of
   // multiple passengers at a time
   // This allows us to change the Passenger Loader without having to change
