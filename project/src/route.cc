@@ -87,7 +87,7 @@ Stop * Route::PrevStop() {
     }
 }
 
-void Route::NextStop() {
+void Route::ToNextStop() {
   destination_stop_index_++;
 
   if (destination_stop_index_ < num_stops_) {
