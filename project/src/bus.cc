@@ -159,6 +159,21 @@ void Bus::Report(std::ostream& out) {
   }
 }
 
+void SmallBus::Report(std::ostream& out) {
+  Bus::Report(out);
+  out << "Bus Type: Small Bus" << std::endl;
+}
+
+void RegularBus::Report(std::ostream& out) {
+  Bus::Report(out);
+  out << "Bus Type: Regular Bus" << std::endl;
+}
+
+void LargeBus::Report(std::ostream& out) {
+  Bus::Report(out);
+  out << "Bus Type: Large Bus" << std::endl;
+}
+
 int Bus::UnloadPassengers() {
   int passengers_unloaded = 0;
   unloader_->UnloadPassengers(&passengers_, next_stop_);

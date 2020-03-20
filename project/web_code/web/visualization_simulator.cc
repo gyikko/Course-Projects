@@ -2,7 +2,17 @@
 #include "visualization_simulator.h"
 
 #include "bus.h"
+#include "bus_factory.h"
 #include "route.h"
+
+int GenerateRandom() {
+    std::random_device dev;
+    std::mt19937 rng(dev());
+    std::uniform_int_distribution<std::mt19937::result_type> dist1(1, 3);
+    int rand_int = dist1(rng);
+
+    return rand_int;
+}
 
 VisualizationSimulator::VisualizationSimulator(WebInterface* webI, ConfigManager* configM) {
     webInterface_ = webI;
@@ -27,7 +37,6 @@ void VisualizationSimulator::Start(const std::vector<int>& busStartTimings, cons
     prototypeRoutes_ = configManager_->GetRoutes();
     for (int i = 0; i < static_cast<int>(prototypeRoutes_.size()); i++) {
         prototypeRoutes_[i]->Report(std::cout);
-        
         prototypeRoutes_[i]->UpdateRouteData();
         webInterface_->UpdateRoute(prototypeRoutes_[i]->GetRouteData());
     }
@@ -49,8 +58,10 @@ void VisualizationSimulator::Update() {
 
             Route * outbound = prototypeRoutes_[2 * i];
             Route * inbound = prototypeRoutes_[2 * i + 1];
+            int busType = GenerateRandom();
 
-            busses_.push_back(new Bus(std::to_string(busId), outbound->Clone(), inbound->Clone(), 60, 1));
+            BusFactory bus;
+            busses_.push_back(bus.GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), busType, 1));
             busId++;
             
             timeSinceLastBus_[i] = busStartTimings_[i];

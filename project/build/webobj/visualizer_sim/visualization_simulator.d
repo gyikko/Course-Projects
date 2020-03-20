@@ -6,7 +6,8 @@
  ../src/passenger_loader.h ../src/./passenger.h \
  ../src/passenger_unloader.h ../src/stop.h ../src/bus.h ../src/route.h \
  ../src/./data_structs.h ../src/./passenger_generator.h \
- ../src/passenger_factory.h ../src/./stop.h route.h config_manager.h
+ ../src/passenger_factory.h ../src/./stop.h route.h config_manager.h \
+ bus_factory.h
 
 /home/jinxx679/Documents/3081/repo-jinxx679/project/web_code/web/visualization_simulator.h:
 
@@ -43,3 +44,5 @@ bus.h:
 route.h:
 
 config_manager.h:
+
+bus_factory.h:

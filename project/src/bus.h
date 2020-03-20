@@ -31,7 +31,7 @@ class Bus {
   bool LoadPassenger(Passenger *);  // returning revenue delta
   bool Move();
   void Update();
-  void Report(std::ostream&);
+  virtual void Report(std::ostream&);
 
   // Vis Getters
   void UpdateBusData();
@@ -64,5 +64,25 @@ class Bus {
 
   // Vis data for bus
   BusData bus_data_;
+};
+class SmallBus : public Bus{
+  public:
+    SmallBus(std::string name, Route * out, Route * in, double speed = 1)
+     :Bus(name, out, in, 30, speed){};
+    void Report(std::ostream&) override;
+};
+
+class RegularBus : public Bus {
+  public:
+    RegularBus(std::string name, Route * out, Route * in, double speed = 1)
+     :Bus(name, out, in, 60, speed){};
+    void Report(std::ostream&) override;
+};
+
+class LargeBus : public Bus {
+  public:
+    LargeBus(std::string name, Route * out, Route * in, double speed = 1)
+     :Bus(name, out, in, 90, speed){};
+    void Report(std::ostream&) override;
 };
 #endif  // SRC_BUS_H_

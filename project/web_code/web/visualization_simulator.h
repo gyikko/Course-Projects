@@ -10,6 +10,7 @@
 
 class Route;
 class Bus;
+class BusFactory;
 class Stop;
 
 class VisualizationSimulator {

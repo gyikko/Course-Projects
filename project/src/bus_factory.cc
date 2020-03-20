@@ -6,16 +6,13 @@
 #include <vector>
 #include <random>
 #include "src/bus_factory.h"
-​
-std::random_device dev;
-std::mt19937 rng(dev());
-std::uniform_int_distribution<std::mt19937::result_type> dist1(1, 3);
-int rand_int = dist1(rng);
 
-if (rand_int == 1){ // small bus
-
-} else if (rand_int == 2) { // regular bus
-
-} else { // large bus
-
+Bus * BusFactory::GenerateBus(std::string name, Route * out, Route * in,
+                             int busType, double speed) {   
+    if (busType == 1) {
+        return new SmallBus(name, out, in, speed);
+    } else if (busType == 2) {
+        return new RegularBus(name, out, in, speed);
+    }
+    return new LargeBus(name, out, in, speed);
 }

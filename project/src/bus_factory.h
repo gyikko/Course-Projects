@@ -3,29 +3,16 @@
  *
  * @copyright 2019 3081 Staff, All rights reserved.
  */
-#ifndef SRC_BUS_H_
-#define SRC_BUS_H_
+#ifndef SRC_BUS_FACTORY_H_
+#define SRC_BUS_FACTORY_H_
 
 #include <vector>
 #include <random>
-
 #include "src/bus.h"
 
 class BusFactory {
- public:
-   
-}
-
-class SmallBus : public BusFactory {
-
-}
-
-class RegularBus : public BusFactory {
-    
-}
-
-class LargeBus : public BusFactory {
-    
-}
-
-#endif  // SRC_BUS_H_
+  public:
+    Bus * GenerateBus(std::string name, Route * out, Route * in,
+                             int busType, double speed = 1);
+};
+#endif  // SRC_BUS_FACTORY_H_
