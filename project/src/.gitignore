@@ -1,5 +1,3 @@
 *.o
 *.exe
 *.csv
-/docs/html/*
-/docs/latex/*

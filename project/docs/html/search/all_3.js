@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['regularbus',['RegularBus',['../classRegularBus.html',1,'']]]
+  ['smallbus',['SmallBus',['../classSmallBus.html',1,'']]]
 ];

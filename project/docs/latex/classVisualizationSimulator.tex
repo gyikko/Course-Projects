@@ -2,7 +2,7 @@
 \label{classVisualizationSimulator}\index{Visualization\+Simulator@{Visualization\+Simulator}}
 
 
-The pause functionality mainly rely on \hyperlink{classVisualizationSimulator_a211b13dd71e679f58bd645089ae10319}{Update()}. Because, when the simulator is paused, we want the simulator to stop updating. So, by defining the status of pause button (clicked or not clicked), \hyperlink{classVisualizationSimulator_a211b13dd71e679f58bd645089ae10319}{Update()} will make a decision to keep updating or pause the process. The similar logic also works for resume functionality. If pause function is called, then un-\/pause it, or pause the function if the pause function is not called.  
+The pause functionality mainly rely on Update(). Because, when the simulator is paused, we want the simulator to stop updating. So, by defining the status of pause button (clicked or not clicked), Update() will make a decision to keep updating or pause the process. The similar logic also works for resume functionality. If pause function is called, then un-\/pause it, or pause the function if the pause function is not called.  
 
 
 
@@ -28,17 +28,16 @@ Collaboration diagram for Visualization\+Simulator\+:\nopagebreak
 void {\bfseries Start} (const std\+::vector$<$ int $>$ \&, const int \&)
 \item 
 \mbox{\Hypertarget{classVisualizationSimulator_a211b13dd71e679f58bd645089ae10319}\label{classVisualizationSimulator_a211b13dd71e679f58bd645089ae10319}} 
-void \hyperlink{classVisualizationSimulator_a211b13dd71e679f58bd645089ae10319}{Update} ()
-\begin{DoxyCompactList}\small\item\em In \hyperlink{classVisualizationSimulator_a211b13dd71e679f58bd645089ae10319}{Update()} function, call the generator everytime when the function tries to generate a new bus, and use the number to decide which bus type will be be generated. \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\item 
 \mbox{\Hypertarget{classVisualizationSimulator_a7f0452e9e371a1bf2d8afb0873771da4}\label{classVisualizationSimulator_a7f0452e9e371a1bf2d8afb0873771da4}} 
-void \hyperlink{classVisualizationSimulator_a7f0452e9e371a1bf2d8afb0873771da4}{Pause} ()
-\begin{DoxyCompactList}\small\item\em The simulator will pause when pause button is clicked, or it will resume when pause button is not clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void {\bfseries Pause} ()
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-The pause functionality mainly rely on \hyperlink{classVisualizationSimulator_a211b13dd71e679f58bd645089ae10319}{Update()}. Because, when the simulator is paused, we want the simulator to stop updating. So, by defining the status of pause button (clicked or not clicked), \hyperlink{classVisualizationSimulator_a211b13dd71e679f58bd645089ae10319}{Update()} will make a decision to keep updating or pause the process. The similar logic also works for resume functionality. If pause function is called, then un-\/pause it, or pause the function if the pause function is not called. 
+The pause functionality mainly rely on Update(). Because, when the simulator is paused, we want the simulator to stop updating. So, by defining the status of pause button (clicked or not clicked), Update() will make a decision to keep updating or pause the process. The similar logic also works for resume functionality. If pause function is called, then un-\/pause it, or pause the function if the pause function is not called. 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/jinxx679/\+Documents/3081/repo-\/jinxx679/project/web\+\_\+code/web/visualization\+\_\+simulator.\+h\item 
-/home/jinxx679/\+Documents/3081/repo-\/jinxx679/project/web\+\_\+code/web/visualization\+\_\+simulator.\+cc\end{DoxyCompactItemize}
+/home/jinxx679/\+Documents/3081/repo-\/jinxx679/project/web\+\_\+code/web/visualization\+\_\+simulator.\+h\end{DoxyCompactItemize}
