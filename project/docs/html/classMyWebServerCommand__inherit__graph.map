@@ -1,8 +1,0 @@
-<map id="MyWebServerCommand" name="MyWebServerCommand">
-<area shape="rect" id="node2" href="$classGetBussesCommand.html" title="{GetBussesCommand\n||+ GetBussesCommand()\l+ execute()\l}" alt="" coords="5,145,172,237"/>
-<area shape="rect" id="node3" href="$classGetRoutesCommand.html" title="{GetRoutesCommand\n||+ GetRoutesCommand()\l+ execute()\l}" alt="" coords="197,145,362,237"/>
-<area shape="rect" id="node4" href="$classInitRoutesCommand.html" title="{InitRoutesCommand\n||+ InitRoutesCommand()\l+ execute()\l}" alt="" coords="386,145,549,237"/>
-<area shape="rect" id="node5" href="$classPauseCommand.html" title="{PauseCommand\n||+ PauseCommand()\l+ execute()\l}" alt="" coords="573,145,711,237"/>
-<area shape="rect" id="node6" href="$classStartCommand.html" title="{StartCommand\n||+ StartCommand()\l+ execute()\l}" alt="" coords="735,145,866,237"/>
-<area shape="rect" id="node7" href="$classUpdateCommand.html" title="{UpdateCommand\n||+ UpdateCommand()\l+ execute()\l}" alt="" coords="890,145,1034,237"/>
-</map>
