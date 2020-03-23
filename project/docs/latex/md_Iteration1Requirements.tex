@@ -1,0 +1,384 @@
+\subsection*{Iteration 1 -\/ {\bfseries N\+O\+TE, T\+HE R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+TS IN T\+H\+IS D\+O\+C\+U\+M\+E\+NT A\+RE S\+U\+B\+J\+E\+CT TO C\+H\+A\+N\+GE. C\+H\+E\+CK IT E\+V\+E\+RY D\+AY OR T\+WO}}
+
+\subsubsection*{Version 1 Issued February 24th}
+
+\subsubsection*{U\+P\+D\+A\+TE 1 -\/ March 2nd -\/ Updated Assement Discussion on Google Tests}
+
+\subsubsection*{U\+P\+D\+A\+TE 2 -\/ March 5th -\/ More clarification on Google Tests (Iteration 1, Deliverable 2)}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Date }&\textbf{ Item }&\textbf{ Description of Verification and Validation of Deliverable(s)  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering \textbf{ Date }&\textbf{ Item }&\textbf{ Description of Verification and Validation of Deliverable(s)  }\\\cline{1-3}
+\endhead
+\PBS\centering F\+RI, Feb 28, 11\+:55pm &U\+ML diagram of the existing simulation (in the {\ttfamily project/src} directory and {\itshape visual\+\_\+simulation} class in the {\ttfamily project/web\+\_\+code/web} directory -\/ submit via Canvas &inspection \\\cline{1-3}
+\PBS\centering F\+RI, March 6, 11\+:55pm &Preliminary Google Tests for \textquotesingle{}Bus\textquotesingle{}, \textquotesingle{}Stop\textquotesingle{}, \textquotesingle{}Passenger\textquotesingle{} and \textquotesingle{}Route\textquotesingle{} &Pass automated tests and inspection \\\cline{1-3}
+\PBS\centering F\+RI, March 20, 11\+:55pm &Documentation and Code Implementation &Automated tests and inspection \\\cline{1-3}
+\end{longtabu}
+In lab 9, you are (were) given a working version of a transit system simulation with a visualization capability. For this semester\textquotesingle{}s 3081 project, you will refactor (update and extend) the functionality of the simulation you were given in lab 9 while rigorously following the process for using version control specified in lab 10. The current simulation models transit around the University of Minnesota campus via bus. The simulation you were given consists a single route with multiple stops and runs until the upper bound number of update time steps specified in the simulation is reached.
+
+Your completed project deliverables should demonstrate good software design and development practices using good design methodologies, and rigorously follow the process for using version control you learned in lab 10
+
+Intermediate deadlines are designed to keep you on track in the iterative development process you are using to develop iteration 1 and the rest of the project this semester.
+
+For this iteration you will be submitting the following deliverables based upon the timetable specified above. Below is the order of submission\+:
+
+
+\begin{DoxyEnumerate}
+\item First deliverable\+: Create a U\+ML class diagram of the domain classes in the {\ttfamily project/src} directory and the visualization\+\_\+simulator class in the {\ttfamily project/web\+\_\+code/web} directory you were given in Lab 09.
+\item Second deliverable\+: Create Google Unit tests for the classes \textquotesingle{}Bus\textquotesingle{}, \textquotesingle{}Stop\textquotesingle{}\textquotesingle{}, \textquotesingle{}Passenger\textquotesingle{}, and \textquotesingle{}Route\textquotesingle{} classes in the {\ttfamily project/src} directory. As specified in lab 9, you create the tests, make the tests, and run the tests from the {\ttfamily project/tests} directory. Refer to lab 8 for a review of how to create, compile, and execute google tests. See the assessment section below and the item Iteration 1, Deliverable 2 in Week 7 of your class Canvas site for additional details on delivery.
+\item Third set of deliverables\+:
+\begin{DoxyEnumerate}
+\item {\itshape Clean up} a few existing issues
+\item Add a new route to the simulation by adding it to the config.\+txt file in the {\ttfamily project/config} directory.
+\item Design and Implement a bus factory capable of creating small, regular, and large buses, and update your initial U\+ML diagram to include it.
+\item Add a pause button to the simulation.
+\item Add the ability for the bus to skip a stop if there are no passengers waiting at an upcoming stop, and no passengers are planning to unload at the upcoming stop.
+\item In your Doxygen mainpage, create a user guide that tutors a new user, with your level of experience, on obtaining, configuring, compiling, and running the simulation, and discuss the alternate design choices you considered for your bus factory. Your discussion should include at least one pro and con of each design, and why you chose to implement the design you implemented.
+\item Ensure all classes in the {\ttfamily project/src} directory and the visualization\+\_\+simulator class in the directory {\ttfamily project/web\+\_\+code/web} are properly documented (All header functions document the classes and their methods using Doxygen, and all implementation (that is, $\ast$.cc) files have self-\/documenting code).
+\item Correct and update the first U\+ML diagram you delivered to include changes to your code including your factory class(es) and their relationships to the classes that already existed in the simulation.
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+\subsubsection*{Deliverables and Submission Process}
+
+With the exception of the P\+DF versions of your U\+ML diagrams, which will be submitted via an assignment item on Canvas, you will submit all your deliverables via Git\+Hub according to the process specified lab 10. We will tag and pull your repository at the specified due dates and grade them according to the contents at that time.
+
+$>$\#\#\#\# You must verify that your submission compiles on a cselabs machine and it is complete. You will receive zero or be heavily penalized if your code does not compile and/or we cannot generate documentation using Doxygen as specified in Lab 7 upon submission.
+
+The schedule is very tight, and it is important that you keep up with the project. The project will continue to build throughout the semester, and if you get behind, it will be very difficult to catch up. For this reason, {\bfseries late assignments will not be accepted}, but you will receive partial credit for partial completion of the requirements -\/ so {\bfseries A\+L\+W\+A\+YS M\+A\+KE S\+U\+RE TO S\+U\+B\+M\+IT S\+O\+M\+E\+T\+H\+I\+NG -\/ S\+O\+ME P\+O\+I\+N\+TS A\+RE B\+E\+T\+T\+ER T\+H\+AN N\+O\+NE}.
+
+You can convert this requirements document to pdf using this tool\+: \href{http://www.markdowntopdf.com/}{\tt http\+://www.\+markdowntopdf.\+com/}
+
+
+
+
+
+\subsection*{Documentation and Code Implementation Requirements}
+
+\subsubsection*{Overview}
+
+The goal of this software project is to enhance a rudimentary transit simulator in which the simulation can be controlled via external configuration (without code change) and be visualized within a graphics window.
+
+In this iteration, you do the following development including\+:
+
+
+\begin{DoxyItemize}
+\item enhancing/modifying the base code
+\item formulating unit tests with Google Test
+\item adding to the simulation class structure
+\item ensuring Google style guide compliance
+\item create design documentation using U\+ML
+\item using Doxygen to document and generate documentation
+\item Use git, and produce self-\/documenting code (i.\+e. good organization and naming conventions).
+\end{DoxyItemize}
+
+Teaching staff (Undergraduate TA\textquotesingle{}s, Graduate TA\textquotesingle{}s, and Instructors) will also be working diligently to provide the structure and support for development, testing, and documentation. Automation in unit testing, style compliance, in-\/house github testing, and documentation will make this an easier process, however it means that you will have to develop within the constraints of these systems. Often there is a learning curve and a lot of systems trouble-\/shooting to get it all working, so start early!
+
+In the first iteration, you will be enhancing the core functionality of the simulation to by designing and implementing the items listed above, to a simulation which currently consists of a single scenario involving campus transit via bus here at the University of Minnesota. This will suit us fine as we are just beginning to understand the structure and capability of the existing simulation. Iterations 2 and 3 will include more changes, enhancements/extensions, and put the core functionality to greater use.
+
+\subsubsection*{Functional Requirements}
+
+You are being provided with a significant initial code base. The first iteration is focused on building domain entities and getting practiced in the software development process. It is also a drop into the depths of C++ syntax. If you have questions about the code provided, please ask. We do not expect you to understand all the constructs in this code. Below is an outline of the existing functionality.
+
+The code is organized such that simulation behavior (i.\+e. the model) is separate from visualization (i.\+e. the view), which allows for automated unit testing using Google Test. In addition, there have been a few entities which have been made into abstractions to allow for extension (and for grading). The primary driver of the visual simulation is you, the user, via the simulation graphics panel (which displays the map, sliders for configuring the simulation, and the start button, which starts the execution of the simulation). The code that drives the simulation can be found in the Java\+Script file {\ttfamily sketch.\+js} located in the directory {\ttfamily project/web\+\_\+graphics}.
+
+The {\itshape main function} (in the file {\itshape main.\+cc}) and the {\itshape visualization\+\_\+simulator} class in the directory {\ttfamily project/web\+\_\+code/web} are used to configure the transit simulation and facilitate communication via the simulation domain classes (found in the {\ttfamily project/src} directory) and the graphical user interface displayed on a web page via a {\itshape web\+\_\+server} (whose code is also found in {\ttfamily project/web\+\_\+code/web}).
+
+
+
+
+
+{\bfseries R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+TS you need to fulfill}
+
+\begin{quote}
+This is just functionality. Along the way, make sure to document the code using \end{quote}
+Doxygen syntax in the header files, and self documenting code (as discussed in Mc\+Connell\textquotesingle{}s text in Chapter 32) in the class implementation ($\ast$.cc) files and the main function. You should also test for Google Style compliance using cpplint.
+
+Below is a prioritized list of feature enhancements, fixes, and refactoring of the code. {\bfseries Complete all functionality in one priority level before moving on to the next.} In this way, if we run out of time, the low priority items will be dropped from the requirements.
+
+\paragraph*{General understanding}
+
+The statistics we have are route-\/based, we know how likely it is that a passenger will show up at that stop in each time unit. When more than one bus is generated for a route, we need to take care with stops. After a bus has passed a stop, but has not yet finished their route, it is possible for passengers to \char`\"{}show up\char`\"{} to stops the bus has already passed. However, when another bus is created for the same route, it should come and pick up these passengers. This means that each bus may have its own understanding of its own route, but the stops have relationships with multiple buses in the simulation. This is something we will discuss and work through in class.
+
+Buses do not make more than one trip through their routes. When they finish both of their routes (outbound and inbound), the bus is from the simulation. This prevents us from doing interesting things with fuel cost and tracking, but also lowers complexity in a few different places.
+
+Before discussing various levels of priority for iteration 1 development, there is one method which requires a special note.
+
+\subparagraph*{\+\_\+ Report \+\_\+}
+
+All of our principal domain entities (passenger, bus, stop, route) have this method. This method was created during the high-\/level design discussions. This output format has been specified and will very likely not change. It is used not only for functional purposes for visualization of data in a non-\/graphical application, but also for verifying functional operation in testing.
+
+\paragraph*{Priority Level 1 \+: Clean up a few items in the simulation and add a new Route}
+
+\subparagraph*{Step 1}
+
+\subparagraph*{Clean up the following items in the code that you were given}
+
+In the {\ttfamily project/src} directory\+:
+
+
+\begin{DoxyEnumerate}
+\item Fix the indentation in the{\ttfamily Bus} class in any areas that need it (check both the {\ttfamily h} and {\ttfamily cc} file)
+\item Change the definition of {\ttfamily Load\+Passener()} so it returns a {\ttfamily bool} instead of an {\ttfamily int} -\/ and make sure it the result is style compliant
+\item Refactor naming\+: Change {\ttfamily Route\+::\+Next\+Stop} to {\ttfamily Route\+::\+To\+Next\+Stop}
+\end{DoxyEnumerate}
+
+In the {\ttfamily project/web\+\_\+code/web} directory\+:
+
+
+\begin{DoxyEnumerate}
+\item Fix the indentation in the file {\ttfamily main.\+cc}
+\end{DoxyEnumerate}
+
+\subparagraph*{Step 2}
+
+Add a new route to the file {\ttfamily config.\+txt} in the directory {\ttfamily project/config}. Note the route should have two components, and outgoing and incoming component, and outgoing and incoming routes should start and end at the same locations -\/ as follows. The start for the outgoing route should be the end for the incoming route, and the start for the incoming route should be the end for the outgoing route.
+
+You can create a new route that is a subset of the route that was given in the {\ttfamily config.\+txt} file (an express route), or an entirely new route. To obtain the longitude and latitude of locations, use google maps!
+
+Any route you create should use locations that are currently within the bounds of the map currently displayed by the simulation we gave you.
+
+It should be noted that when a real-\/world stop on a bus schedule has stopping locations on opposite sides of the street, we treat these as two different Stops in our vernacular.
+
+One other note, the probability of a passenger being generated during a simulation update for a stop is the last value for a stop.
+
+\subparagraph*{Priority Level 2\+: Design a bus factory and implement it in the simulation}
+
+You should create a bus factory class that is capable of creating large, regular, or small capacity busses and implement it in the simulation. You can do this by creating a concrete factory class or an abstract factory.
+
+Note the values of small, regular, and large should be, 30, 60, 90. Moreover, this document will be updated with more information specific requirements for the factory as we discuss it further in class.
+
+\subparagraph*{Priority Level 3\+: Add Functionality to Pause / Resume}
+
+Add a pause/resume button to the simulation. If a user presses the pause/resume button, the simulation should pause. When the user presses the button again, the simulation should resume from where it left off.
+
+This will entail adding a button to the graphical user interface, and depending on the design, could require the addition of command to the command pattern implemented in the {\ttfamily my\+\_\+web\+\_\+server\+\_\+command} files in the directory {\ttfamily project/web\+\_\+code/web}. This document will by updated with more information on the specifications for this functionality in the coming weeks.
+
+\subparagraph*{Priority Level 4\+: Skip Stops}
+
+The current version of the simulation stops at every stop along a route whether there are passengers at the stop or not. Add functionality that enables the functionality enabling a bus to skip a stop if there are no passengers waiting at an upcoming stop, and no passengers are planning to unload at the upcoming stop.
+
+\subparagraph*{Challenge \mbox{[}N\+O\+TE\+: This is U\+N\+G\+R\+A\+D\+ED, only for fun.\mbox{]}}
+
+In early prototyping and debugging of individual units, it is very common to simply use the display for output of information. std\+::cout is a familiar friend in this. However, once we get to a point where we want to have a persistent access to results, flexibility in operation and easier ability to test program output. To this end, we refactor our code to allow for the use of other ostream objects in place of std\+::cout for the \textquotesingle{}Report() \textquotesingle{}methods that exist within our system.
+
+Refactor the code to include the ability to accept the name of an output file on the command line to which all output will be written. If no name is provided on the command line, the simulation should write its output to std\+::cout
+
+
+
+
+
+\subsubsection*{Unit Testing with Google Test}
+
+\href{https://github.com/google/googletest}{\tt https\+://github.\+com/google/googletest}
+
+Unit tests are essential in a large-\/scale project, because the entire code base can be tested regularly and automatically as it is being developed. In the strictest application of Test-\/\+Driven Development (T\+DD), the tests are written {\itshape before} the code, which helps solidify requirements and write testable code.
+
+A sample test file is provided in the /project/tests directory. This directory must be a sibling to your {\itshape src} directory. When you {\itshape make} the tests by running the makefile in the {\ttfamily project/tests} directory , they will generate an executable (in build/bin) which, when executed, displays a report of the tests. Use this file as a guide to your own testing. While the requirements for testing in Preliminary Turn-\/in \#2 (more later) are rather light, you can expect a much more robust testing requirement in later iterations. Do not slack on making good tests for your code!
+
+\subsubsection*{Google Style Guide Compliance}
+
+\href{https://google.github.io/styleguide/cppguide.html}{\tt https\+://google.\+github.\+io/styleguide/cppguide.\+html}
+
+Consistency in code organization, naming conventions, file structure, and formatting makes code easier to read and integrate. There are many options with various merits, so it is up to the development team to establish these conventions, or, in the words of Kevin Wendt, an instructor for previous iterations of the course, \char`\"{}\+The only style guide that really matters is the one your boss uses.\char`\"{} We decided to use the Google style guide because it is published, documented, and has automated tests. We don\textquotesingle{}t agree with every decision, but we are complying so that we are all coding to a single standard.
+
+To test your code for Google style compliance, you can run cpplint on a cselabs machine (and will how style compliance will be automatically checked on submission)\+:
+
+
+\begin{DoxyCode}
+cd src
+../../cpplint/cpplint-cse.sh --root=.. *.h *.cc
+\end{DoxyCode}
+
+
+The tag {\ttfamily -\/-\/root=..} impacts the header guard. The header guards provided in the base code all start with {\ttfamily S\+RC}. If you are getting errors due to the header guard because it is expecting {\ttfamily I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+RC} or no {\ttfamily S\+RC} {\bfseries do not change the header guard.} Instead, check that the flag is set properly. If the {\ttfamily -\/-\/root} flag is not working, please notify staff so that we can figure out how to fix it.
+
+
+
+
+
+\subsection*{Documentation}
+
+
+\begin{DoxyItemize}
+\item U\+ML diagrams
+\item Doxygen generated web pages including mainpage.\+h
+\item Self-\/\+Documenting code that is Google Style compliant
+\end{DoxyItemize}
+
+Code documentation comes in many forms for many audiences. For this project, {\bfseries your audience is other programmers}, who need to understand class interfaces, function parameters, function behavior, code organization, class organization, and code logic. Self-\/documenting code (i.\+e. using good organization and naming conventions) is an efficient means of communicating, since you have to write the code anyway. {\itshape Good} comments -\/ not too much, not too little -\/ help guide others through the logic and class interfaces. For the larger picture of code and class structure, use U\+ML diagrams and Doxygen-\/generated (automatic) web pages.
+
+\paragraph*{U\+ML}
+
+The U\+ML diagram is a visual aid that helps other programmers better understand the code structure. It should include only those aspects that are essential, otherwise your diagram will get too cluttered and overwhelm the reader. Here are some things to keep in mind as you are designing your U\+ML\+:
+
+
+\begin{DoxyItemize}
+\item Make the most important classes prominent in the layout (i.\+e. your eye tends to focus in that general area when you first look at it).
+\item Lay out the classes so that the connections have as few crossovers as possible.
+\item Do not include setters and getters in your methods list unless there is something special about them that you need to communicate.
+\item You should not include structs or enumerated types unless they add value to the understanding of the overall code structure.
+\item If a class is composed of another class, you can show that association with a solid line arrow (if there is only 1) or using the {\itshape compose} diamond.
+\item Include cardinality where appropriate.
+\item Add comments to classes and/or relationships to clarify the interaction or to point out subtleties that are essential to using the code.
+\end{DoxyItemize}
+
+The final diagram you submit for iteration 1 U\+ML should reflect the changes you made while completing the code requirements. We will be looking for proper use of U\+ML components, and a correct depiction of the code structure.
+
+There are many free tools that you can use to create the U\+ML including Doxygen, and draw.\+io (see\+: \href{https://www.draw.io/}{\tt https\+://www.\+draw.\+io/}). {\bfseries Submit your U\+ML in a .pdf file via the submission item on Canvas}.
+
+\paragraph*{Doxygen}
+
+Doxygen automatically generates documentation of class and code structure when you follow some simple conventions for commenting within your code ({\itshape see} \href{http://www.doxygen.nl/manual/index.html}{\tt http\+://www.\+doxygen.\+nl/manual/index.\+html} and \href{https://caiorss.github.io/C-Cpp-Notes/Doxygen-documentation.html}{\tt https\+://caiorss.\+github.\+io/\+C-\/\+Cpp-\/\+Notes/\+Doxygen-\/documentation.\+html}). You have had a lab on Doxygen (lab 7) and we will likely cover a bit more in class. To start with, look over the documentation provided with the code base to understand how to document classes, methods, parameters, and even {\itshape todo\textquotesingle{}s} and {\itshape bugs} in your code. In lab 7, you learned how to compile with your Doxyfile and generate web pages. Please look over the generated web pages for missing and incorrect information. The requirements for Doxygen include\+:
+
+
+\begin{DoxyItemize}
+\item the file {\ttfamily project/docs/\+Doxyfile} to generate documentation (after you complete lab 9, you should have this in your {\ttfamily project/docs} directory).
+\item a {\itshape mainpage.\+h} file that serves as the homepage of your automated documentation. This is an introduction to the code to other programmers who might be new to the project and need to know how to obtain it, configure it, compile it, and execute it. After you complete lab 9, you should have a mainpage.\+h file that you can extend in your {\ttfamily project/src} directory.
+\item fully documented classes and methods.
+\item a discussion of at least two ways in which you could have implemented the bus factory. The discussion should clearly describe each possible implementation (use a U\+ML diagram), and discuss at least one pro and one con of implementing each of the alternatives. Finally, you should specify which alternative you implemented, and why.
+\item The /html directory should {\itshape not} be in your repo in github.\+umn.\+edu -\/ nor should your build directory, executable files, or object files.
+\end{DoxyItemize}
+
+\begin{quote}
+As part of your fresh clone prior to submission, please also compile the Doxygen and look at the generated webpages. \end{quote}
+
+
+All of these elements of documentation will be assessed, accounting for a significant portion of your grade for each iteration (for this iteration -\/ iteration 1, documentation will account for 1/2 of your grade). Think about these two extremes\+: 1) your code functions perfectly and you have almost no documentation -\/ you will likely fail on this iteration; 2) your code is not functional and will only compile when you comment most of it out, but if you have complete, great documentation -\/ you will likely get a decent grade on this iteration. {\bfseries Get in the habit of creating the documentation along with the code.}
+
+
+
+
+
+\subsection*{Assessment}
+
+Your software {\bfseries must compile on a cselabs machine or it will not be graded, and you will recieve a zero for your submission}. We will not grade your project unless it compiles. As long as you provide a version that compiles, we will evaluate those aspects that are partially functional for partial credit. In other words, $<$u$>$comment it out if it breaks compilation$<$/u$>$.
+
+Your software will be assessed through automatic testing and by the T\+As. You will receive immediate feedback whenever you push to github (although not now -\/ we will let you know when those scripts are in place). At the deadline, all submissions will be downloaded and the automated testing will no longer be available. Through both automated testing and the T\+As, the process for testing will be to {\ttfamily make clean} then {\ttfamily make}. We {\bfseries highly encourage} you too freshly clone your repo on a {\bfseries cselabs machine} and to then {\ttfamily make clean} and {\ttfamily make}, followed by a run of your tests to confirm all is working well before submitting your tests and code.
+
+This is the breakdown for point distribution\+:
+
+20\% \+: Iteration \#1
+\begin{DoxyItemize}
+\item 5\% \+: U\+ML (base code, draft). Refine for submission with Final Documentation.
+\item 10\% \+: Preliminary Testing Submission
+\item 45\% \+: Final Documentation
+\item 40\% \+: Final Code
+\end{DoxyItemize}
+
+\subsubsection*{Documentation Assessment ( 50\% )}
+
+\paragraph*{Draft of U\+ML Class Diagrams ( 5\% )}
+
+Preliminary Turn-\/in \#1 will require you to turn in a U\+ML diagram of the project code. You will depict project code you\textquotesingle{}ve already been given in the {\ttfamily project/src} directory and the visual\+\_\+simulation class in the {\ttfamily project/web/web\+\_\+code} directory. $\ast$$\ast$\+\_\+\+\_\+\+At this point in time, the reality is that it is Y\+OU who needs to understand the code we have provided, and this exercise will be a tremendous help in that regard, saving you hours when you start to code.\+\_\+\+\_\+$\ast$$\ast$ Keep in mind that U\+ML is a visual aid and should include only those aspects that are essential, otherwise your diagram will get too cluttered and overwhelming to the reader. Keep in mind that you can add notes and clarification within the document.
+
+This is a draft of the final product, and we anticipate that it will be revised and improved. We will be looking for general proper use of U\+ML syntax, and a correct depiction of the code structure of the existing project code (code from shared-\/upstream\textquotesingle{}s support-\/code branch). The U\+ML syntax you should use is specified and documented here\+: \href{https://cppcodetips.wordpress.com/2013/12/23/uml-class-diagram-explained-with-c-samples/}{\tt https\+://cppcodetips.\+wordpress.\+com/2013/12/23/uml-\/class-\/diagram-\/explained-\/with-\/c-\/samples/}
+
+\paragraph*{Complete Iteration Documentation ( 45\% )}
+
+\paragraph*{Design Document and U\+ML}
+
+Documentation includes a design overview of the core domain elements (the classes you\textquotesingle{}re building) provided in mainpage.\+h in /src and your final updated U\+ML diagram in P\+DF file format. The mainpage instructions for how to obtain, configure, compile, and execute the simulation should be written in prose and your discussion of the design and implementation of your factory class should be at least 2 pages of text (if it were on an 8.\+5x11 paper), probably not more than 3.\+5. Your should highlight important elements of your bus factory design and implementation, and the structure of your domain elements. We will look for a well written and well organized document that clearly articulates the design. It must stand alone in the sense that anyone reading it should not have to look at code to understand the design. This will likely require images of U\+ML and/or snippets of code included.
+
+Your initial U\+ML diagram should be updated to include the class(es), methods, and relationships that you have added or changed during your iteration 1 developement activities. {\bfseries Submit your final version of your U\+ML diagram in a .pdf file via the submission item on Canvas.}
+
+\paragraph*{Google Style Compliance}
+
+We will run the automated test using \textquotesingle{}cpplint\textquotesingle{} to check compliance. There are a few additional elements for compliance that {\itshape cpplint} does not check for, thus T\+As will inspect for those. In general, 1 or 2 minor or isolating deviations from the Google Style guide are acceptable. Significant and persistent variations, however, will be docked.
+
+\paragraph*{Doxygen Documentation}
+
+We will compile the code to generate {\itshape Doxygen} web pages. All classes and major functions must be documented as specified in the {\itshape Doxygen} documentation.
+
+\paragraph*{Git\+Hub Issues}
+
+Your repository must include Issues that communicate to the T\+As. If there are no bugs in your code, include a Git\+Hub Issue that states that there are no known bugs to report and that further verification is necessary (never say that there aren\textquotesingle{}t bugs, because we know that that is typically not the case \+:-\/). We anticipate that a few bugs will exist in your project and they will reveal themselves during testing. If you have a few bugs A\+ND you report them, then you will lose fewer points than if you don\textquotesingle{}t report them -\/ provided the bugs aren\textquotesingle{}t preventing the simulation from running to completion. Also, keep in mind that development will continue throughout the semester, and if you can\textquotesingle{}t fix your code this iteration, you {\itshape might} have an opportunity in successive iterations to do so(there are no implied guarantees on this though), so keep use github to keep track of all your bugs.
+
+For this iteration, every time you make one single change to your code, you should follow the process documented in lab 10. Create an issue, a new branch, address the issue (add or fix functionality, etc.), test. When it works, commit and include a $\ast$$\ast$ meaningful$\ast$$\ast$ commit message (what did you fix, add, etc.), merge the new branch back in with the development branch, and then test again. We will grade you on your adherence to the process. You should have at L\+E\+A\+ST as many issues, branches, commits, and merges as there are updates and new functionality required by the iteration.
+
+\paragraph*{Self-\/\+Documenting Code}
+
+T\+As will inspect code for good naming conventions, good code organization, and internal comments to highlight logic. You should not nest conditional statements too deep. Methods should not be more than a screen full, if possible. Names should be descriptive of the variable\textquotesingle{}s or function\textquotesingle{}s purpose. Like elements should be next to each other in the file. Review Chapter 32 in the Mc\+Connell text, available on the Class Canvas site, for more information on how to create self-\/documenting code.
+
+\subsubsection*{Code Assessment ( 50\% )}
+
+\paragraph*{Preliminary Testing Submission ( 10\% ) {\bfseries U\+P\+D\+A\+TE}}
+
+In the week prior to the due date of the completed iteration, we will confirm that you have submitted work for Preliminary Turn-\/in \#2. You must include tests for {\bfseries all} public methods in the Passenger class, and at a minimum, the constructors of the Bus, Stop, and Route class, along with any methods that return a Boolean value to receive full points for the preliminary submission. There will be no manual inspection of the code at this point -- it is strictly a test for completed functionality and testing. We will ensure that your tests are effective using automatic means, similar to the Testing lab (Lab 8). There will be transparency in this process in that you will know what functionality will be tested, and you will see the results. Points earned at this stage are independent of the 40\% points for the final submission.
+
+In the {\ttfamily project/tests} directory, the file {\ttfamily passenger\+\_\+\+U\+T.\+cc} has been started as an example for you. You should add the rest of the required tests to this file, and create {\ttfamily bus\+\_\+\+U\+T.\+cc}, {\ttfamily stop\+\_\+\+U\+T.\+cc}, and {\ttfamily route\+\_\+\+U\+T.\+cc} files in the same directory to test the other classes.
+
+Your tests do not have to be google style compliant, and you do not need to follow the version control development process specified in lab 10 to design and implement your tests
+
+{\bfseries Your google tests should be in the development branch in your repository on github.\+umn.\+edu by the end of the day Friday, March 3.} {\itshape Remember to G\+IT A\+DD, G\+IT C\+O\+M\+M\+IT and G\+IT P\+U\+SH them before the deadline}
+
+\subparagraph*{Note that your google tests are not required to be google-\/style compliant. You should put the tests under revision control using git, but you do not have to follow the process specified in lab 10 to create, compile and run your google tests. Finally, see the R\+E\+A\+D\+M\+E.\+md file in the {\ttfamily project/src} directory for instructions on how to compile and run your google tests.}
+
+\paragraph*{Completed Iteration Code ( 40\% )}
+
+Code functionality will be tested with automated tests through Github, which in turn run the automated unit tests of Google Test. We expect you to have basic feedback running by the end of week two of Iteration 1. In that case, you will see {\itshape some} of the elements we\textquotesingle{}ll be testing in our assessment. Review the automated feedback prior to final submission, as it will identify any issues with directory structure, compilation issues, or failed unit tests. Assessment will also include a visual inspection of the simulation and its output, as well as a visual inspection of the code.
+
+
+
+
+
+\subsection*{Getting Started}
+
+A\+F\+T\+ER reading this document, if you have not done so, complete lab 9. If you have completed lab 9 and 10, then you are ready to start refactoring and augmenting the simulation -\/ make sure you follow the process documented in lab 10 when doing so.
+
+
+
+
+
+\subsection*{Important notes to remember}
+
+$>$Your software is a reflection of your understanding of the requirements as specified in this document. If you do not understand any portion of the requirements or you think that the requirements are underspecified, it is your responsibility to get clarification from the instructor or a TA. Please read this document carefully and review it prior to turning in your iteration for assessment.
+
+$>$The O\+N\+LY supported environment is the C\+S\+E\+Labs environment. This is where we will run your code for assessment, and where you should absolutely ensure that your project will compile and run. It is recommended to log onto a C\+S\+E\+Labs machine, do a {\bfseries clean} pull of your repo (i.\+e., pull into a brand new directory), and then build and test your project.
+
+
+
+
+
+\subsection*{Additional Resources}
+
+Local System and Compilation\+:
+\begin{DoxyItemize}
+\item Repo\+: \href{https://github.umn.edu/umn-csci-3081-s20/csci3081-shared-upstream}{\tt https\+://github.\+umn.\+edu/umn-\/csci-\/3081-\/s20/csci3081-\/shared-\/upstream}
+\item Compilation\+: \href{https://gcc.gnu.org/}{\tt https\+://gcc.\+gnu.\+org/}
+\item Linux quick reference\+: \href{https://files.fosswire.com/2007/08/fwunixref.pdf}{\tt https\+://files.\+fosswire.\+com/2007/08/fwunixref.\+pdf}
+\item Makefile Resources\+: \href{https://www.cs.bu.edu/teaching/cpp/writing-makefiles/}{\tt https\+://www.\+cs.\+bu.\+edu/teaching/cpp/writing-\/makefiles/}
+\end{DoxyItemize}
+
+Testing\+:
+\begin{DoxyItemize}
+\item \href{https://github.com/google/googletest}{\tt https\+://github.\+com/google/googletest}
+\item Unit Testing\+: \href{https://martinfowler.com/bliki/UnitTest.html}{\tt https\+://martinfowler.\+com/bliki/\+Unit\+Test.\+html}
+\end{DoxyItemize}
+
+Style\+:
+\begin{DoxyItemize}
+\item \href{https://google.github.io/styleguide/cppguide.html}{\tt https\+://google.\+github.\+io/styleguide/cppguide.\+html}
+\item \href{https://github.com/google/styleguide/tree/gh-pages/cpplint}{\tt https\+://github.\+com/google/styleguide/tree/gh-\/pages/cpplint}
+\item \href{https://www.python.org/downloads/}{\tt https\+://www.\+python.\+org/downloads/}
+\end{DoxyItemize}
+
+Documentation\+:
+\begin{DoxyItemize}
+\item \href{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}{\tt https\+://github.\+com/adam-\/p/markdown-\/here/wiki/\+Markdown-\/\+Cheatsheet}
+\end{DoxyItemize}
+
+I\+D\+Es\+:
+\begin{DoxyItemize}
+\item Xemacs\+: \href{https://www.xemacs.org/}{\tt https\+://www.\+xemacs.\+org/}
+\item vi\+: \href{http://www.lagmonster.org/docs/vi.html}{\tt http\+://www.\+lagmonster.\+org/docs/vi.\+html}
+\item Atom\+: \href{https://atom.io/}{\tt https\+://atom.\+io/}
+\item Sublime\+: \href{https://www.sublimetext.com/}{\tt https\+://www.\+sublimetext.\+com/}
+\item Eclipse\+: \href{https://eclipse.org/}{\tt https\+://eclipse.\+org/} 
+\end{DoxyItemize}

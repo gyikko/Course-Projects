@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classBus.html" title="As the description mentioned above, Bus Factory was created to generate different types of buses..." alt="" coords="5,56,51,83"/>
+<area shape="rect" id="node2" href="$classLargeBus.html" title="A Small Bus product, bus size is 90 maximum capacity. " alt="" coords="105,5,183,32"/>
+<area shape="rect" id="node3" href="$classRegularBus.html" title="A Small Bus product, bus size is 60 maximum capacity. " alt="" coords="99,56,189,83"/>
+<area shape="rect" id="node4" href="$classSmallBus.html" title="A Small Bus product, bus size is 30 maximum capacity. " alt="" coords="105,107,183,133"/>
+</map>

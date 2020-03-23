@@ -1,0 +1,5 @@
+<map id="Bus" name="Bus">
+<area shape="rect" id="node2" href="$classLargeBus.html" title="A Small Bus product, bus size is 90 maximum capacity. " alt="" coords="5,292,103,384"/>
+<area shape="rect" id="node3" href="$classRegularBus.html" title="A Small Bus product, bus size is 60 maximum capacity. " alt="" coords="127,292,237,384"/>
+<area shape="rect" id="node4" href="$classSmallBus.html" title="A Small Bus product, bus size is 30 maximum capacity. " alt="" coords="262,292,361,384"/>
+</map>

@@ -1,0 +1,23 @@
+\hypertarget{bus__factory_8h}{}\section{/home/jinxx679/\+Documents/3081/repo-\/jinxx679/project/src/bus\+\_\+factory.h File Reference}
+\label{bus__factory_8h}\index{/home/jinxx679/\+Documents/3081/repo-\/jinxx679/project/src/bus\+\_\+factory.\+h@{/home/jinxx679/\+Documents/3081/repo-\/jinxx679/project/src/bus\+\_\+factory.\+h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include \char`\"{}src/bus.\+h\char`\"{}}\newline
+Include dependency graph for bus\+\_\+factory.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bus__factory_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classBusFactory}{Bus\+Factory}
+\begin{DoxyCompactList}\small\item\em To make the project more releastic, I implemented a new class, \hyperlink{classBus}{Bus} Factory, which can generate different kinds of buses. So far, the needs for different buses types are just reporting different capacity. So, here I used concreate factory method for bus factory. The class basically just generate the bus and use an int parameter to define the type of the buses. When the parameter is set to one, small bus will be generated, regular size will be generated when 2 is assigned to the parameter and leaves value 3 for having large size bus. The value will be assigned randomly to make sure all kinds of buses will appear on the simulator. The process will be applied in visualization\+\_\+simulator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+2019 3081 Staff, All rights reserved. 
+\end{DoxyCopyright}

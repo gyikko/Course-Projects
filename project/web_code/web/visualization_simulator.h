@@ -12,7 +12,14 @@ class Route;
 class Bus;
 class BusFactory;
 class Stop;
-
+/**
+ * @brief
+ * The pause functionality mainly rely on Update(). Because, when the simulator is paused, we want the
+ * simulator to stop updating. So, by defining the status of pause button (clicked or not clicked),
+ * Update() will make a decision to keep updating or pause the process. The similar logic also works
+ * for resume functionality. If pause function is called, then un-pause it, or pause the function if
+ * the pause function is not called.
+ */
 class VisualizationSimulator {
     public:
         VisualizationSimulator(WebInterface*, ConfigManager*);
