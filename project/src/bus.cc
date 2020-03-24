@@ -86,7 +86,7 @@ bool Bus::Move() {
                 // any negative will
                 // affect the distance remaining (see addition below)
 
-                if (passengers_handled != 0) {
+                if (passengers_handled != 0) { //passengers are loaded or unloaded
                     distance_remaining_ = 0;
                     did_move = true;  // We move if we have gotten passengers?
                 }
@@ -94,6 +94,7 @@ bool Bus::Move() {
                 current_route->ToNextStop();
                 next_stop_ = current_route->GetDestinationStop();
                 distance_remaining_ += current_route->GetNextStopDistance();
+                printf("No passengers are loaded or unloaded, stop skipped.\n");
                 return did_move;
 
             } else {
