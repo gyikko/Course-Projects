@@ -3,3 +3,5 @@ build
 
 # OSX automatically includes these, so ignore them as well.
 .DS_Store
+/docs/html/*
+/docs/latex/*

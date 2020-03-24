@@ -3,8 +3,8 @@
  *
  * @copyright 2019 3081 Staff, All rights reserved.
  */
-#ifndef BUS_H_
-#define BUS_H_
+#ifndef SRC_BUS_H_
+#define SRC_BUS_H_
 
 #include <iostream>
 #include <list>
@@ -22,7 +22,15 @@ class PassengerUnloader;
 class PassengerLoader;
 class Route;
 class Stop;
-
+/**
+ * @brief
+ * As the description mentioned above, Bus Factory was created to generate different types of buses. So,
+ * in this class, I implimented three different buses categorized by capacity of the bus, small, regular,
+ * and large. Small bus will have 30 maximum capacity, regular is assigned with 60 capacity while large
+ * can load 90 passengers maximum. The three class all inherited from their parent class, Bus.
+ * Also, they all have on public class, Report, to tell people which type of bus is generated when the
+ * simulator is running.
+ */
 class Bus {
  public:
   Bus(std::string name, Route * out, Route * in, int capacity = 60,
@@ -31,7 +39,7 @@ class Bus {
   bool LoadPassenger(Passenger *);  // returning revenue delta
   bool Move();
   void Update();
-  void Report(std::ostream&);
+  virtual void Report(std::ostream&);
 
   // Vis Getters
   void UpdateBusData();
@@ -65,4 +73,34 @@ class Bus {
   // Vis data for bus
   BusData bus_data_;
 };
-#endif  // BUS_H_
+/**
+ * @brief
+ * A Small Bus product, bus size is 30 maximum capacity.
+ */
+class SmallBus : public Bus{
+ public:
+    SmallBus(std::string name, Route * out, Route * in, double speed = 1)
+     :Bus(name, out, in, 30, speed) {}
+    void Report(std::ostream&) override;
+};
+/**
+ * @brief
+ * A Small Bus product, bus size is 60 maximum capacity
+ */
+class RegularBus : public Bus {
+ public:
+    RegularBus(std::string name, Route * out, Route * in, double speed = 1)
+     :Bus(name, out, in, 60, speed) {}
+    void Report(std::ostream&) override;
+};
+/**
+ * @brief
+ * A Small Bus product, bus size is 90 maximum capacity
+ */
+class LargeBus : public Bus {
+ public:
+    LargeBus(std::string name, Route * out, Route * in, double speed = 1)
+     :Bus(name, out, in, 90, speed) {}
+    void Report(std::ostream&) override;
+};
+#endif  // SRC_BUS_H_

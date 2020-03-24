@@ -91,9 +91,10 @@ bool Bus::Move() {
                     did_move = true;  // We move if we have gotten passengers?
                 }
 
-                current_route->NextStop();
+                current_route->ToNextStop();
                 next_stop_ = current_route->GetDestinationStop();
                 distance_remaining_ += current_route->GetNextStopDistance();
+                printf("No passengers are loaded or unloaded, stop skipped.\n");
                 return did_move;
 
             } else {
@@ -119,7 +120,7 @@ bool Bus::Move() {
             did_move = true;
         }
 
-        current_route->NextStop();
+        current_route->ToNextStop();
 
         // If we have incremented past the end of the outgoing route, set our
         // next stop to actually be the first stpo in incoming
@@ -128,7 +129,6 @@ bool Bus::Move() {
             distance_remaining_ += incoming_route_->GetNextStopDistance();
         } else {
             next_stop_ = current_route->GetDestinationStop();
-
             // adding here in case negative time still remains
             // // (see passengers_handled above)
             distance_remaining_ += current_route->GetNextStopDistance();
@@ -158,6 +158,21 @@ void Bus::Report(std::ostream& out) {
                                         it != passengers_.end(); it++) {
     (*it)->Report(out);
   }
+}
+
+void SmallBus::Report(std::ostream& out) {
+  Bus::Report(out);
+  out << "Bus Type: Small Bus" << std::endl;
+}
+
+void RegularBus::Report(std::ostream& out) {
+  Bus::Report(out);
+  out << "Bus Type: Regular Bus" << std::endl;
+}
+
+void LargeBus::Report(std::ostream& out) {
+  Bus::Report(out);
+  out << "Bus Type: Large Bus" << std::endl;
 }
 
 int Bus::UnloadPassengers() {

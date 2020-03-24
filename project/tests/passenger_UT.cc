@@ -55,3 +55,52 @@ TEST_F(PassengerTests, Constructor) {
   passenger->GetOnBus();
   EXPECT_EQ(passenger->IsOnBus(), true);
 };
+
+
+
+TEST_F(PassengerTests, NameCheck) {
+  passenger1 = new Passenger(12, "John Doe");
+  passenger2 = new Passenger(12, "Apple Bee");
+  std::string expected_output1 = "Name: John Doe";
+  std::string expected_output2 = "Name: Apple Bee";
+  testing::internal::CaptureStdout();
+  passenger1 -> Report(std::cout);
+  std::string output1 = testing::internal::GetCapturedStdout();
+
+  testing::internal::CaptureStdout();
+  passenger2 -> Report(std::cout);
+  std::string output2 = testing::internal::GetCapturedStdout();
+  
+  int p1 = output1.find(expected_output1);
+  int p2 = output2.find(expected_output2);
+  EXPECT_GE(p1, 0);
+  EXPECT_GE(p2, 0);
+}
+
+
+TEST_F(PassengerTests, IsOnCheck) {
+  passenger = new Passenger(12, "John Doe");
+  passenger -> GetOnBus();
+  EXPECT_EQ(passenger->IsOnBus(), true);
+}
+
+
+TEST_F(PassengerTests, TimeOnBus) {
+  passenger = new Passenger(12, "John Doe");
+  passenger -> GetOnBus();
+  for (int i = 0; i < 5; i++)
+    passenger -> Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 6);
+}
+
+TEST_F(PassengerTests, UpdateCheck) {
+  passenger = new Passenger(12, "John Doe");
+  passenger -> Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 1);
+}
+
+
+TEST_F(PassengerTests, DestinationCheck) {
+  passenger = new Passenger(12, "John Doe");
+  EXPECT_EQ(passenger->GetDestination(), 12);
+}
