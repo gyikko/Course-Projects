@@ -62,7 +62,7 @@
  * a single product, it is difficult to add into the code. Products and products are
  * less compatible.
  * - Pattern Chosen for the Project
- * This project used concrete factory pattern. Because for this project, so far I do
+ * This project uses concrete factory pattern. Because for this project, so far I do
  * not need to fulfill more functionality, in order to be simple, I chose to implement
  * concrete factory pattern.
  */
