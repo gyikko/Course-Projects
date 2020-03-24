@@ -78,9 +78,9 @@ class Bus {
  * A Small Bus product, bus size is 30 maximum capacity.
  */
 class SmallBus : public Bus{
-  public:
+ public:
     SmallBus(std::string name, Route * out, Route * in, double speed = 1)
-     :Bus(name, out, in, 30, speed){};
+     :Bus(name, out, in, 30, speed) {}
     void Report(std::ostream&) override;
 };
 /**
@@ -88,9 +88,9 @@ class SmallBus : public Bus{
  * A Small Bus product, bus size is 60 maximum capacity
  */
 class RegularBus : public Bus {
-  public:
+ public:
     RegularBus(std::string name, Route * out, Route * in, double speed = 1)
-     :Bus(name, out, in, 60, speed){};
+     :Bus(name, out, in, 60, speed) {}
     void Report(std::ostream&) override;
 };
 /**
@@ -98,9 +98,9 @@ class RegularBus : public Bus {
  * A Small Bus product, bus size is 90 maximum capacity
  */
 class LargeBus : public Bus {
-  public:
+ public:
     LargeBus(std::string name, Route * out, Route * in, double speed = 1)
-     :Bus(name, out, in, 90, speed){};
+     :Bus(name, out, in, 90, speed) {}
     void Report(std::ostream&) override;
 };
 #endif  // SRC_BUS_H_

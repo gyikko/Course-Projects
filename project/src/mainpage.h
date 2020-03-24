@@ -1,3 +1,8 @@
+/**
+ * @file mainpage.h
+ *
+ * @copyright 2020 Jingyi Jin, All rights reserved.
+ */
 /*! \mainpage Transit Simulator and Visualization Project 
  *
  * \section intro_sec Introduction

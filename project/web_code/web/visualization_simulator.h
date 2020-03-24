@@ -1,12 +1,16 @@
-
-#ifndef VISUALIZATION_SIMULATOR_H_
-#define VISUALIZATION_SIMULATOR_H_
+/**
+ * @file passenger_factory.cc
+ *
+ * @copyright 2019 3081 Staff, All rights reserved.
+ */
+#ifndef WEB_VISUALIZATION_SIMULATOR_H_
+#define WEB_VISUALIZATION_SIMULATOR_H_
 
 #include <vector>
 #include <list>
 
-#include "web_interface.h"
-#include "config_manager.h"
+#include "web_code/web/web_interface.h"
+#include "src/config_manager.h"
 
 class Route;
 class Bus;
@@ -21,7 +25,7 @@ class Stop;
  * the pause function is not called.
  */
 class VisualizationSimulator {
-    public:
+ public:
         VisualizationSimulator(WebInterface*, ConfigManager*);
         ~VisualizationSimulator();
 
@@ -29,10 +33,9 @@ class VisualizationSimulator {
         void Update();
         void Pause();
 
-    private:
+ private:
         WebInterface* webInterface_;
         ConfigManager* configManager_;
-       
         std::vector<int> busStartTimings_;
         std::vector<int> timeSinceLastBus_;
         int numTimeSteps_;
@@ -45,4 +48,4 @@ class VisualizationSimulator {
         bool pause = false;
 };
 
-#endif // VISUALIZATION_SIMULATOR_H_
+#endif  // WEB_VISUALIZATION_SIMULATOR_H_

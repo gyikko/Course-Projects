@@ -8,7 +8,7 @@
 #include "src/bus_factory.h"
 
 Bus * BusFactory::GenerateBus(std::string name, Route * out, Route * in,
-                             int busType, double speed) {   
+                             int busType, double speed) {
     if (busType == 1) {
         return new SmallBus(name, out, in, speed);
     } else if (busType == 2) {

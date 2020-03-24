@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <random>
+#include <string>
 #include "src/bus.h"
 
 /**
@@ -21,7 +22,7 @@
  * appear on the simulator. The process will be applied in visualization_simulator.
  */
 class BusFactory {
-  public:
+ public:
     Bus * GenerateBus(std::string name, Route * out, Route * in,
                              int busType, double speed = 1);
 };

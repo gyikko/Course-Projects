@@ -86,7 +86,7 @@ bool Bus::Move() {
                 // any negative will
                 // affect the distance remaining (see addition below)
 
-                if (passengers_handled != 0) { //passengers are loaded or unloaded
+                if (passengers_handled != 0) {
                     distance_remaining_ = 0;
                     did_move = true;  // We move if we have gotten passengers?
                 }
