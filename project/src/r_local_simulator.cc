@@ -31,25 +31,25 @@ bool rLocalSimulator::Start() {
   //Must be dynamic...
   
   // CC Eastbound stops
-  Stop * stop_CC_EB_1 = new Stop(0, 44.972392, -93.243774);  // West bank station
+  Stop * stop_CC_EB_1 = new Stop(0, 44.972372, -93.246774);  // West bank station
   Stop * stop_CC_EB_2 = new Stop(1, 44.973580, -93.235071);  // student union station
-  Stop * stop_CC_EB_3 = new Stop(2, 44.975392, -93.226632);  // Oak St & Washington Ave
-  Stop * stop_CC_EB_4 = new Stop(3, 44.975837, -93.222174);  // before transit
-  Stop * stop_CC_EB_5 = new Stop(4, 44.980753, -93.180669);  // tway
-  Stop * stop_CC_EB_6 = new Stop(5, 44.983375, -93.178810);  // Fairgrounds
-  Stop * stop_CC_EB_7 = new Stop(6, 44.984540, -93.181692);  // Buford & Gartner
-  Stop * stop_CC_EB_8 = new Stop(7, 44.984630, -93.186352);  // SPSC
+  Stop * stop_CC_EB_3 = new Stop(2, 44.975352, -93.221632);  // Oak St & Washington Ave
+  Stop * stop_CC_EB_4 = new Stop(3, 44.975847, -93.222174);  // before transit
+  Stop * stop_CC_EB_5 = new Stop(4, 44.980723, -93.183669);  // tway
+  Stop * stop_CC_EB_6 = new Stop(5, 44.983355, -93.178810);  // Fairgrounds
+  Stop * stop_CC_EB_7 = new Stop(6, 44.984560, -93.181692);  // Buford & Gartner
+  Stop * stop_CC_EB_8 = new Stop(7, 44.984610, -93.186352);  // SPSC
   
   // CC Westbound stops
-  Stop * stop_CC_WB_1 = new Stop(8, 44.984630, -93.186352);  // SPSC
-  Stop * stop_CC_WB_2 = new Stop(9, 44.984482, -93.181657);  // Buford & Gartner
-  Stop * stop_CC_WB_3 = new Stop(10, 44.983703, -93.178846);  // Fairgrounds
-  Stop * stop_CC_WB_4 = new Stop(11, 44.980663, -93.180808);  // Tway
-  Stop * stop_CC_WB_5 = new Stop(12, 44.976397, -93.221801);  // before transit
-  Stop * stop_CC_WB_6 = new Stop(13, 44.978058, -93.229176); // Ridder
-  Stop * stop_CC_WB_7 = new Stop(14, 44.978366, -93.236038);  // Jones-Eddy
-  Stop * stop_CC_WB_8 = new Stop(15, 44.974549, -93.236927);  // Bruininks
-  Stop * stop_CC_WB_9 = new Stop(16, 44.972638, -93.243591);  // Blegen
+  Stop * stop_CC_WB_1 = new Stop(8, 44.985630, -93.186352);  // SPSC
+  Stop * stop_CC_WB_2 = new Stop(9, 44.982482, -93.181357);  // Buford & Gartner
+  Stop * stop_CC_WB_3 = new Stop(10, 44.973703, -93.176846);  // Fairgrounds
+  Stop * stop_CC_WB_4 = new Stop(11, 44.910663, -93.189808);  // Tway
+  Stop * stop_CC_WB_5 = new Stop(12, 44.999397, -93.220801);  // before transit
+  Stop * stop_CC_WB_6 = new Stop(13, 44.977058, -93.229176); // Ridder
+  Stop * stop_CC_WB_7 = new Stop(14, 44.975366, -93.231038);  // Jones-Eddy
+  Stop * stop_CC_WB_8 = new Stop(15, 44.976549, -93.232927);  // Bruininks
+  Stop * stop_CC_WB_9 = new Stop(16, 44.976638, -93.243591);  // Blegen
 
   CC_EB_stops_list.push_back(stop_CC_EB_1);
   CC_EB_stops[0] = stop_CC_EB_1;
