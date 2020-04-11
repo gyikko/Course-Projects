@@ -20,8 +20,6 @@
 #include "src/route.h"
 #include "src/stop.h"
 
-using namespace std;
-
 class PassengerUnloader;
 class PassengerLoader;
 class Route;
@@ -65,8 +63,8 @@ class Bus : public IObservable {
 
  private:
   // Observer for bus
-  vector<IObserver *> observer_;
-  
+  std::vector<IObserver *> observer_;
+
   int UnloadPassengers();  // returning revenue delta
   // bool Refuel();
   PassengerUnloader * unloader_;
