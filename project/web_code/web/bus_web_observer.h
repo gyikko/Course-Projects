@@ -6,6 +6,11 @@
 #include "my_web_server_session.h"
 #include 
 
+/**
+ * @brief
+ * This is in charge of connecting the observer with
+ * front end
+ */
 class BusWebObserver : public IObserver{
   private:
     MyWebServerSession *session;

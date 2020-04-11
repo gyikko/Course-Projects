@@ -29,6 +29,12 @@
  * use `./build/bin/vis_sim <port_number>` to ececute. Then, to see the simulator, open a web browser,
  * and enter the address in your address bar, `http://127.0.0.1:<port_number>/web_graphics/project.html`.
  * 
+ * \subsection observer_sec Designing and Implement the Observer Pattern
+ * Observer Pattern mainly include two part. The first part is mainly responsible for update information
+ * for bus data. Meanwhile, IObservable class is like a subject for IObserver to observe. So,
+ * in order to let the IObserver to observe bus class, so bus class is turned into a derived class
+ * of IObservable class.
+ * \image html Observer_UML.png
  * \subsection discussion_sec How Bus Factory Can be Implemented?
  * Bus Factory can be implemented into two ways, abstract factory method and concrete bus factory.
  * Though concrete bus factory is implemented, I will discuss both methods in here.
@@ -65,6 +71,7 @@
  * This project uses concrete factory pattern. Because for this project, so far I do
  * not need to fulfill more functionality, in order to be simple, I chose to implement
  * concrete factory pattern.
+ * 
  */
 
 #ifndef SRC_MAINPAGE_H_

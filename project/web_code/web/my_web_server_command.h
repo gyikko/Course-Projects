@@ -63,6 +63,7 @@ class PauseCommand : public MyWebServerCommand {
         VisualizationSimulator* mySim;
 };
 
+// This is in charge of connecting the listener button
 class AddListenerCommand : public MyWebServerCommand {
     public:
         AddListenerCommand(VisualizationSimulator* sim);

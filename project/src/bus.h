@@ -34,6 +34,10 @@ class Stop;
  * can load 90 passengers maximum. The three class all inherited from their parent class, Bus.
  * Also, they all have on public class, Report, to tell people which type of bus is generated when the
  * simulator is running.
+ * 
+ * As the new observer pattern is implemented, Bus becomes a derived class of IObservable class which
+ * is a subject class to Observable class. In order to observe Bus in a better way, methods
+ * inherited from Observer and Observable class are built in as well.
  */
 class Bus : public IObservable {
  public:
