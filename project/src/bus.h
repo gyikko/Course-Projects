@@ -9,14 +9,18 @@
 #include <iostream>
 #include <list>
 #include <string>
+#include <vector>
+#include <algorithm>
 
+#include "src/observer.h"
 #include "src/data_structs.h"
-
 #include "src/passenger.h"
 #include "src/passenger_loader.h"
 #include "src/passenger_unloader.h"
 #include "src/route.h"
 #include "src/stop.h"
+
+using namespace std;
 
 class PassengerUnloader;
 class PassengerLoader;
@@ -31,7 +35,7 @@ class Stop;
  * Also, they all have on public class, Report, to tell people which type of bus is generated when the
  * simulator is running.
  */
-class Bus {
+class Bus : public IObservable {
  public:
   Bus(std::string name, Route * out, Route * in, int capacity = 60,
                                                  double speed = 1);
@@ -49,7 +53,16 @@ class Bus {
   size_t GetNumPassengers() const { return passengers_.size(); }
   int GetCapacity() const { return passenger_max_capacity_; }
 
+  // Built for observer
+  void RegisterObserver(IObserver *bus_observer);
+  void ClearObservers();
+  void NotifyObservers(BusData *info);
+  void Notify(BusData *info);
+
  private:
+  // Observer for bus
+  vector<IObserver *> observer_;
+  
   int UnloadPassengers();  // returning revenue delta
   // bool Refuel();
   PassengerUnloader * unloader_;
@@ -73,11 +86,12 @@ class Bus {
   // Vis data for bus
   BusData bus_data_;
 };
+
 /**
  * @brief
  * A Small Bus product, bus size is 30 maximum capacity.
  */
-class SmallBus : public Bus{
+class SmallBus : public Bus {
  public:
     SmallBus(std::string name, Route * out, Route * in, double speed = 1)
      :Bus(name, out, in, 30, speed) {}

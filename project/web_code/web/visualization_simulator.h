@@ -8,7 +8,7 @@
 
 #include <vector>
 #include <list>
-
+#include "src/observer.h"
 #include "web_code/web/web_interface.h"
 #include "src/config_manager.h"
 
@@ -32,6 +32,8 @@ class VisualizationSimulator {
         void Start(const std::vector<int>&, const int&);
         void Update();
         void Pause();
+        void ClearListeners();
+        void AddListener(std::string id, IObserver *observer);
 
  private:
         WebInterface* webInterface_;

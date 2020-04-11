@@ -3,9 +3,14 @@
  *
  * @copyright 2019 3081 Staff, All rights reserved.
  */
+#include <vector>
+#include <algorithm>
 #include "src/bus.h"
 #include "src/passenger.h"
 #include "src/stop.h"
+#include "src/data_structs.h"
+#include "src/observer.h"
+using namespace std;
 
 Bus::Bus(std::string name, Route * out, Route * in,
                          int capacity, double speed) {
@@ -138,7 +143,6 @@ bool Bus::Move() {
   return did_move;
 }
 
-
 // bool Refuel() {
 // //This may become more complex in the future
 // fuel_ = max_fuel_;
@@ -224,4 +228,24 @@ void Bus::UpdateBusData() {
 
 BusData Bus::GetBusData() const {
     return bus_data_;
+}
+
+void Bus::RegisterObserver(IObserver *observer) {
+  observer_.push_back(observer);
+}
+
+void Bus::ClearObservers() {
+  for (size_t i = 0; i < observer_.size(); i++) {
+    observer_[i] = NULL;
+  }
+}
+
+void Bus::NotifyObservers(BusData *info) {
+  for (size_t i = 0; i < observer_.size(); i++){
+    Notify(info);
+  }
+}
+
+void Bus::Notify(BusData *info) {
+  Update();
 }

@@ -1,4 +1,4 @@
-
+#include "visualization_simulator.h"
 #include "my_web_server_command.h" 
 
 
@@ -127,12 +127,20 @@ void UpdateCommand::execute(MyWebServerSession* session, picojson::value& comman
 }
 
 PauseCommand::PauseCommand(VisualizationSimulator* sim): mySim(sim){}
+
 void PauseCommand::execute(MyWebServerSession* session, picojson::value& command, MyWebServerSessionState* state) {
     (void)session;
     (void)state;
     (void)command;
 
     mySim->Pause();
+}
+
+AddListenerCommand::AddListenerCommand(VisualizationSimulator* sim): mySim(sim){}
+void AddListenerCommand::execute(MyWebServerSession* session, picojson::value& command, MyWebServerSessionState* state) {
+    (void)session;
+    (void)state;
+    (void)command;
 }
 
 InitRoutesCommand::InitRoutesCommand(ConfigManager* configManager) : cm(configManager) {}

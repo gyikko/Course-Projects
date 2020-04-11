@@ -4,8 +4,8 @@
  * @copyright 2019 3081 Staff, All rights reserved.
  */
 #include "web_code/web/visualization_simulator.h"
-
 #include "src/bus.h"
+#include "src/observer.h"
 #include "src/bus_factory.h"
 #include "src/route.h"
 
@@ -105,4 +105,16 @@ void VisualizationSimulator::Update() {
 
 void VisualizationSimulator::Pause() {
     pause = !pause;
+}
+
+void VisualizationSimulator::ClearListeners() {
+    for (size_t i = 0; i < busses_.size(); i++) {
+        busses_[i]->ClearObservers();
+    }
+}
+
+void VisualizationSimulator::AddListener(std::string id, IObserver *observer) {
+    for (size_t i = 0; i < busses_.size(); i++) {
+        busses_[i]->RegisterObserver(observer);
+    }
 }
