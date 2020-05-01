@@ -71,7 +71,16 @@
  * This project uses concrete factory pattern. Because for this project, so far I do
  * not need to fulfill more functionality, in order to be simple, I chose to implement
  * concrete factory pattern.
- * 
+ *
+ * \subsection decorator_sec Pros and Cons of Decorator Pattern
+ * - Pros
+ * 1. Decorator allows people to add behaviors without recompiling the source code. 
+ * 2. Decorator makes the extension easier without doing more modification.
+ * 3. The decorator pattern is more open to extension.
+ * - Cons
+ * 1. Decorators may be to complicited to apply since many small objects are involved.
+ * 2. If the original code was built in concrete type, implementing decorator can
+ * cause more issues.
  */
 
 #ifndef SRC_MAINPAGE_H_
