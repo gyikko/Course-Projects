@@ -10,7 +10,7 @@
 #include "src/stop.h"
 #include "src/data_structs.h"
 #include "src/observer.h"
-using namespace std;
+
 
 Bus::Bus(std::string name, Route * out, Route * in,
                          int capacity, double speed) {
@@ -241,7 +241,7 @@ void Bus::ClearObservers() {
 }
 
 void Bus::NotifyObservers(BusData *info) {
-  for (size_t i = 0; i < observer_.size(); i++){
+  for (size_t i = 0; i < observer_.size(); i++) {
     Notify(info);
   }
 }

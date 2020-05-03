@@ -1,7 +1,7 @@
 /**
  * @file iobservable.cc
  *
- * @copyright Jingyi Jin, All rights reserved.
+ * @copyright 2019 3081 Staff, All rights reserved.
  */
 #include <vector>
 #include <list>
@@ -27,7 +27,7 @@ void IObservable::NotifyObservers(BusData * info) {
     for (std::vector<IObserver*>::const_iterator iter = observer_.begin();
         iter != observer_.end(); ++iter) {
             if (*iter != 0) {
-                //(*iter) -> Notify(info);
+                // (*iter) -> Notify(info);
         }
     }
 }

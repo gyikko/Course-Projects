@@ -64,7 +64,7 @@ class Bus : public IObservable {
  private:
   // Observer for bus
   std::vector<IObserver *> observer_;
-  
+
   int UnloadPassengers();  // returning revenue delta
   // bool Refuel();
   PassengerUnloader * unloader_;

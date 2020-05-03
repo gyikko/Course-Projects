@@ -1,7 +1,7 @@
 /**
  * @file file_writer.h
  *
- * @copyright Yuqing Qin, All rights reserved.
+ * @copyright 2019 3081 Staff, All rights reserved.
  */
 #ifndef SRC_FILE_WRITER_H_
 #define SRC_FILE_WRITER_H_
@@ -12,7 +12,7 @@
 
 
 class FileWriter{
-  public:
+ public:
     void Write(std::string, std::vector<std::string>);
 };
 

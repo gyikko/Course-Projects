@@ -7,6 +7,7 @@
 #ifndef SRC_PASSENGER_UNLOADER_H_
 #define SRC_PASSENGER_UNLOADER_H_
 #include <list>
+#include <string>
 #include "src/passenger.h"
 #include "src/stop.h"
 class Stop;

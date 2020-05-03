@@ -13,7 +13,7 @@
 
 
 class Util{
-  public:
+ public:
     static std::vector<std::string> processOutput(std::ostringstream&);
 };
 
