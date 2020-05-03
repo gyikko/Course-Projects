@@ -5,9 +5,12 @@
  */
 #include "web_code/web/visualization_simulator.h"
 #include "src/bus.h"
-#include "src/observer.h"
+#include "src/observable.h"
 #include "src/bus_factory.h"
 #include "src/route.h"
+#include "src/file_manager.h"
+#include "src/file_writer.h"
+#include "src/util.h"
 
 int GenerateRandom() {
     std::random_device dev;
@@ -48,41 +51,62 @@ void VisualizationSimulator::Start(const std::vector<int>& busStartTimings,
 }
 
 void VisualizationSimulator::Update() {
-    simulationTimeElapsed_++;
-
-    std::cout << "~~~~~~~~~~ The time is now " << simulationTimeElapsed_;
-    std::cout << "~~~~~~~~~~" << std::endl;
-
-    std::cout << "~~~~~~~~~~ Generating new busses if needed ";
-    std::cout << "~~~~~~~~~~" << std::endl;
-
-    // Check if we need to generate new busses
-    for (int i = 0; i < static_cast<int>(timeSinceLastBus_.size()); i++) {
-        // Check if we need to make a new bus
-        if (0 >= timeSinceLastBus_[i]) {
-            Route * outbound = prototypeRoutes_[2 * i];
-            Route * inbound = prototypeRoutes_[2 * i + 1];
-            int busType = GenerateRandom();
-
-            BusFactory bus;
-            busses_.push_back(bus.GenerateBus(std::to_string(busId),
-                              outbound->Clone(), inbound->Clone(), busType, 1));
-            busId++;
-            timeSinceLastBus_[i] = busStartTimings_[i];
-        } else {
-            timeSinceLastBus_[i]--;
-        }
-    }
     if (pause == false) {
+        simulationTimeElapsed_++;
+
+        std::cout << "~~~~~~~~~~ The time is now " << simulationTimeElapsed_;
+        std::cout << "~~~~~~~~~~" << std::endl;
+
+        std::cout << "~~~~~~~~~~ Generating new busses if needed ";
+        std::cout << "~~~~~~~~~~" << std::endl;
+
+        // Check if we need to generate new busses
+        for (int i = 0; i < static_cast<int>(timeSinceLastBus_.size()); i++) {
+            // Check if we need to make a new bus
+            if (0 >= timeSinceLastBus_[i]) {
+                Route * outbound = prototypeRoutes_[2 * i];
+                Route * inbound = prototypeRoutes_[2 * i + 1];
+                int busType = GenerateRandom();
+
+                BusFactory bus;
+                busses_.push_back(bus.GenerateBus(std::to_string(busId),
+                                outbound->Clone(), inbound->Clone(), busType, 1));
+                busId++;
+                timeSinceLastBus_[i] = busStartTimings_[i];
+            } else {
+                timeSinceLastBus_[i]--;
+            }
+        }
+    
         std::cout << "~~~~~~~~~ Updating busses ";
         std::cout << "~~~~~~~~~" << std::endl;
 
+        std::ostringstream bus_data_oss;
+        if(simulationTimeElapsed_ == numTimeSteps_){
+        for (int i = static_cast<int>(busses_.size()) - 1; i >= 0; i--) {
+                busses_[i] -> Report(bus_data_oss);
+                std::vector<std::string> bus_data = Util::processOutput(bus_data_oss);
+                FileWriter fw = FileWriterManager::GetInstance();
+                fw.Write(bus_stats_file_name, bus_data);
+
+                // bus_data_oss.flush();
+                bus_data_oss.str("");
+
+        }
+        }
         // Update busses
         for (int i = static_cast<int>(busses_.size()) - 1; i >= 0; i--) {
             busses_[i]->Update();
 
             if (busses_[i]->IsTripComplete()) {
                 webInterface_->UpdateBus(busses_[i]->GetBusData(), true);
+                busses_[i] -> Report(bus_data_oss);
+                std::vector<std::string> bus_data = Util::processOutput(bus_data_oss);
+                FileWriter fw = FileWriterManager::GetInstance();
+                fw.Write(bus_stats_file_name, bus_data);
+
+                // bus_data_oss.flush();
+                bus_data_oss.str("");
                 busses_.erase(busses_.begin() + i);
                 continue;
             }

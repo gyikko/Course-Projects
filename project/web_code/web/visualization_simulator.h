@@ -45,9 +45,10 @@ class VisualizationSimulator {
 
         std::vector<Route *> prototypeRoutes_;
         std::vector<Bus *> busses_;
-
+        BusFactory *busfactory;
         int busId = 1000;
         bool pause = false;
+        std::string bus_stats_file_name = "BusData.csv";
 };
 
 #endif  // WEB_VISUALIZATION_SIMULATOR_H_
