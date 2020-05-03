@@ -24,17 +24,4 @@ class IObserver {
  public:
     void Notify(BusData *info);  // Notify the bus information
 };
-/**
- * @brief
- *This class is the base class of Bus
- * It helps to user to observe the bus rides on route
- */
-class IObservable {
- private:
-    std::vector<IObserver *> observer_;
- public:
-    void  RegisterObserver(IObserver * observer);  // Add observer to vector
-    void ClearObservers();  // delete the observers
-    void NotifyObservers(BusData * info);  // Upddate the observer results
-};
 #endif  // SRC_OBSERVER_H_
