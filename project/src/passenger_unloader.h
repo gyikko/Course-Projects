@@ -13,6 +13,7 @@ class Stop;
 class Passenger;
 
 class PassengerUnloader {
+    std::string passenger_file_name = "PassData.csv";
  public:
   // UnloadPassengers returns the number of passengers removed from the bus.
   int UnloadPassengers(std::list<Passenger*> * passengers,
