@@ -11,7 +11,10 @@
 #include <vector>
 #include <sstream>
 
-
+/**
+ * @brief
+ * This class is in charge of outputing the process
+ */
 class Util{
  public:
     static std::vector<std::string> processOutput(std::ostringstream&);

@@ -10,7 +10,11 @@
 #include <iostream>
 #include <vector>
 
-
+/**
+ * @brief
+ * This class is in charge of writing statistics results in
+ * csv files.
+ */
 class FileWriter{
  public:
     void Write(std::string, std::vector<std::string>);
