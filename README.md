@@ -8,7 +8,9 @@
 #### [Problem 2: Debugging the Puzzlebox](https://github.com/gyikko/csci-2021-projects/tree/main/project2-problem2)
 - Fun level: ⭐️⭐️⭐️⭐️⭐️
 - Goal: Use `gdb` to decrypt puzzlebox's input 
----
+
+
+
 ### Project 3: Assembly Coding and Debugging
 #### [Problem 2: The Binary Bomb](https://github.com/gyikko/csci-2021-projects/tree/main/project3-problem2)
 - Fun level: ⭐️⭐️⭐️⭐️⭐️
