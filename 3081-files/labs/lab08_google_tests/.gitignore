@@ -1,0 +1,5 @@
+*.o
+*.a
+*.out
+*.pvt
+date_unittest
