@@ -12,3 +12,6 @@
 #### [Problem 2: The Binary Bomb](https://github.com/gyikko/csci-2021-projects/tree/main/project3-problem2)
 - Fun level: ⭐️⭐️⭐️⭐️⭐️
 - Goal: Similar to Problem 2 of Project 2, but easily to loose points by exploding bombs.
+
+# 
+[Project Link](https://github.com/gyikko/Course-Projects/tree/3081-code)
